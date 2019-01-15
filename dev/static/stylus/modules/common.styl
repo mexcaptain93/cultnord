@@ -1,0 +1,58 @@
+.burger
+  display: block
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0
+  width: 33px
+  height: 28px
+  font-size: 0
+  text-indent: -9999px
+  appearance: none
+  box-shadow: none
+  border-radius: none
+  border: none
+  cursor: pointer
+
+
+  span
+    display: block
+    position: absolute
+    top: 12px
+    left: 5px
+    right: 5px
+    height: 2px
+    background: $gray
+
+
+    &::before, &::after
+      position: absolute
+      display: block
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: $gray
+      content: ""
+      transition: transform 0.3s
+
+    &::before
+      top: -10px
+
+    &::after
+      bottom: -10px
+
+  &_opened
+
+    span
+
+      background: transparent
+
+      &::before
+        top: 0
+        transform: rotate(45deg)
+        background: $gray
+
+      &::after
+        bottom: 0
+        transform: rotate(-45deg)
+        background: $gray

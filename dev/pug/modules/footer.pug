@@ -1,6 +1,6 @@
 footer.footer
-    .container
-        .footer__left
+    .footer__wrap.container
+        .footer__block
             .footer__line
                 .footer__logo
                     a(href='#')
@@ -8,6 +8,67 @@ footer.footer
                 .footer__elem
                     .footer__heading
                         span Контактная информация
-                    .footer__text
-                        span Архангельск, пр. Троицкий, 49 #[br] тел.:        (8182) 28-63-69, #[br] факс:    (8182) 28-63-69 #[br]
-        .footer__right
+                    .footer__address
+                        span Архангельск, пр. Троицкий, 49 #[br] #[span.footer__phone тел.:]        (8182) 28-63-69, #[br] #[span.footer__fax факс.:]    (8182) 28-63-69 #[br]
+                    .footer__socials.socials
+                        ul.socials__list
+                            li.socials__item
+                                a(href='#' target='_blank')
+                                    img(src='static/img/general/socials-fb.png' alt='Facebook')
+                            li.socials__item
+                                a(href='#' target='_blank')
+                                    img(src='static/img/general/socials-vk.png' alt='VK')
+                            li.socials__item
+                                a(href='#' target='_blank')
+                                    img(src='static/img/general/socials-tw.png' alt='Twitter')
+            .footer__copyright
+                    span &copy; 2016 - 2019 &mdash; Министерство культуры Архангельской области
+        .footer__block
+            .footer__elem
+                .footer__heading
+                    span Культурное наследие
+                .footer__menu.menu
+                    ul.menu__list
+                        li.menu__item
+                            a(href='#') Фольклор, литература
+                        li.menu__item
+                            a(href='#') Ремёсла и промыслы
+                        li.menu__item
+                            a(href='#') Изобразительное искусство
+                        li.menu__item
+                            a(href='#') Музыка
+                        li.menu__item
+                            a(href='#') Театр
+                        li.menu__item
+                            a(href='#') Зодчество
+                        li.menu__item
+                            a(href='#') Наука и просвещение
+                        li.menu__item
+                            a(href='#') Традиции и обычаи
+                        li.menu__item
+                            a(href='#') Памятники истории культуры
+                        li.menu__item
+                            a(href='#')
+                        li.menu__item
+                            a(href='#')
+        .footer__block
+            .footer__elem.footer__info
+                .footer__heading
+                    span Информация
+                .footer__menu.menu
+                    ul.menu__list
+                        li.menu__item
+                            a(href='#') О проекте
+                        li.menu__item
+                            a(href='#') Карта сайта
+            .footer__elem
+                .footer__heading
+                    span Подписка
+                .footer__subscribe.subscribe
+                    .subscribe__hint
+                        span Оставьте ваш e-mail, чтобы #[br] получать наши новости
+                    .subscribe__form
+                        input.subscribe__input(type='text' placeholder='ваш e-mail')
+                        button.subscribe__button
+
+

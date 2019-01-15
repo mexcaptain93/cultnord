@@ -1,5 +1,108 @@
 .footer
   flex 0 0 auto
+  background-color: $gray_dark
 
-  &__text
-    white-space: pre
+  font-family: 'PTSerif'
+  color: $white
+  font-size: 16px
+  line-height: 24px
+
+  &__wrap
+    display: flex
+    padding-top: 80px
+    padding-bottom: 72px
+
+  &__block
+
+    &:first-child
+      margin-right: 127px
+
+    &:nth-child(2)
+      margin-right: 72px
+
+  &__line
+    display: flex
+
+  &__logo
+    margin-top: 4px
+    margin-right: 45px
+
+  &__heading
+    margin-bottom: 6px
+
+    font-weight: bold
+
+  &__phone
+    margin-right: 34px
+
+  &__fax
+    margin-right: 23px
+
+  .socials
+    margin-top: 32px
+
+    &__list
+      display: flex
+
+    &__item
+      margin-right: 19px
+
+      &:last-child
+        margin-right: 0
+
+  &__copyright
+    margin-top: 49px
+
+    color: $white
+    font-size: 15px
+    line-height: 30px
+    letter-spacing: 0
+
+  &__info
+    margin-bottom: 47px
+
+  .subscribe
+
+    &__hint
+      margin-top: 10px
+      margin-bottom: 22px
+
+      font-size: 14px
+      line-height: normal
+
+    &__form
+      position: relative
+      width: 245px
+      
+    &__input
+      width: 100%
+      padding: 8px 0
+      background-color: transparent
+      border: none
+      border-bottom: 1px solid $gray_light
+
+      font-family: 'PTSerif'
+      font-size: 14px
+      color: $white
+
+      &::placeholder
+        color: $gray_light
+
+
+    &__button
+      position: absolute
+      right: 5px
+      bottom: 8px
+      z-index: 1
+      cursor: pointer
+      padding: 0
+      border: 0
+      background: 0 0
+      -webkit-appearance: none
+      width: 19px
+      height: 17px
+      background-repeat: no-repeat
+      background-size: contain
+      background-image: url('../img/general/arrow-right-white.png')
+      
+

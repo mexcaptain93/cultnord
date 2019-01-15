@@ -1,5 +1,12 @@
 .header
 
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 30px
+    padding-bottom: 43px
+
   &__menu
     width: 400px
 
@@ -13,74 +20,70 @@
     margin-right: 47px
 
 
-  .container
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding-top: 30px
-    padding-bottom: 43px
 
 
-.menu
 
-  &__list
-    display: flex
+  .menu
 
-  &__item
-    position: relative
-    margin-right: 34px
-    padding: 25px 0
-
-    font-size: 18px
-    line-height: 18px
-    letter-spacing: 1.8px
-    color: $gray
-    text-transform: uppercase
-
-    &:last-child
-      margin-right: 0
-
-    &:hover
-
-      & > .submenu
-        display: block
-
-  &__submenu
-    display: none
-    position: absolute
-    top: 64px
-    width: 320px
-    padding: 29px 20px
-    border: 1px solid $brown
-    box-shadow: 0 6px 10px 0 rgba(13, 105, 112, 0.28)
-    background-color: $white
-
-  .submenu
+    &__list
+      display: flex
 
     &__item
-      margin-bottom: 10px
+      position: relative
+      margin-right: 34px
+      padding: 25px 0
 
-      font-size: 16px
-      line-height: 24px
+      font-size: 18px
+      line-height: 18px
+      letter-spacing: 1.8px
       color: $gray
-      letter-spacing: 0
-      text-transform: none
+      text-transform: uppercase
 
-      a
-        display: flex
-        align-items: flex-start
+      &:last-child
+        margin-right: 0
 
-        &::before
-          content: ''
-          flex-grow: 0
-          flex-shrink: 0
-          width: 7px
-          height: 11px
-          margin-top: 6px
-          margin-right: 17px
-          background-image: url('../img/general/flag.png')
-          background-repeat: no-repeat
-          background-size: contain
+      &:hover
+
+        & > .submenu
+          display: block
+
+    &__submenu
+      display: none
+      z-index: 2
+      position: absolute
+      top: 64px
+      width: 320px
+      padding: 29px 20px
+      border: 1px solid $brown
+      box-shadow: 0 6px 10px 0 rgba(13, 105, 112, 0.28)
+      background-color: $white
+
+    .submenu
+
+      &__item
+        margin-bottom: 10px
+
+        font-size: 16px
+        line-height: 24px
+        color: $gray
+        letter-spacing: 0
+        text-transform: none
+
+        a
+          display: flex
+          align-items: flex-start
+
+          &::before
+            content: ''
+            flex-grow: 0
+            flex-shrink: 0
+            width: 7px
+            height: 11px
+            margin-top: 6px
+            margin-right: 17px
+            background-image: url('../img/general/flag.png')
+            background-repeat: no-repeat
+            background-size: contain
 
 
 

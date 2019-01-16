@@ -7,8 +7,33 @@
     padding-top: 30px
     padding-bottom: 43px
 
+    @media $tablet
+      padding-top: 15px
+      padding-bottom: 20px
+
+  &__logo
+
+    @media $desktop_small
+      order: 0
+      margin-right: 45px
+
+    @media $tablet
+      margin-right: 30px
+
+    img
+
+      @media $tablet
+        max-height: 75px
+
   &__menu
     width: 400px
+
+    @media $desktop_small
+      order: 1
+      flex-grow: 1
+
+    @media $tablet_small
+      display: none
 
   &__burger-search
     width: 400px
@@ -16,11 +41,12 @@
     align-items: center
     justify-content: flex-end
 
+    @media $desktop_small
+      width: auto
+      order: 3
+
   &__burger
     margin-right: 47px
-
-
-
 
 
   .menu

@@ -258,13 +258,15 @@ u
 
     &.button_icon
 
-      i.prev
-        background-image: url('../img/general/prev-white.png')
+      i
+        &.prev
+          background-image: url('../img/general/prev-white.png')
 
       &:hover
 
-        i.prev
-          background-image: url('../img/general/prev-blue.png')
+        i
+          &.prev
+            background-image: url('../img/general/prev-blue.png')
 
   &_icon
     padding-left: 30px
@@ -283,8 +285,57 @@ u
 
         margin-top: -4px
         background-image: url('../img/general/prev-black.png')
-        
+
+      &.next-bold
+        width: 21px
+        height: 23px
+        margin-right: -10px
+        margin-top: -4px
+        background-image: url('../img/general/next-bold-blue-light.png')
+
+
     &:hover 
       
-      i.prev
-        background-image: url('../img/general/prev-white.png')
+      i
+
+        &.prev
+          background-image: url('../img/general/prev-white.png')
+
+        &.next-bold
+          background-image: url('../img/general/next-bold-blue.png')
+
+  &_serif
+    border: 2px solid $white
+    padding: 10px 24px 4px
+    box-shadow: 0px 4px 3px 0px rgba(2, 55, 59, 0.14);
+    background-color: $blue
+
+    font-family: 'PTSerif'
+    font-size: 12px
+    line-height: 18px
+    letter-spacing: 1.5px
+    color: $white
+    font-weight: bold
+
+    &:hover
+      background-color: $white
+
+      color: $blue
+
+  &_serif-big
+    @extend .button_serif
+
+    padding: 12px 42px 10px
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 1.4px
+
+    i
+
+      &.next-bold
+        margin-left: 8px
+
+
+
+
+

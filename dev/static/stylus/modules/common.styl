@@ -227,3 +227,64 @@ u
     font-size: 11px
     line-height: 16px
     letter-spacing: 0
+
+.button
+  display: inline-block
+  border: 1px solid $brown_light
+  padding: 14px 38px 11px
+  background-color: $white
+
+  color: $brown_light2
+  font-size: 14px
+  line-height: 22px
+  letter-spacing: 1.4px
+  text-transform: uppercase
+  text-decoration: none
+  transition: .3s all ease
+
+  &:hover
+    border-color: $blue
+    background-color: $blue
+    color: $white
+
+  &_color
+    border-color: $blue
+    background-color: $blue
+    color: $white
+
+    &:hover
+      background-color: $white
+      color: $blue
+
+    &.button_icon
+
+      i.prev
+        background-image: url('../img/general/prev-white.png')
+
+      &:hover
+
+        i.prev
+          background-image: url('../img/general/prev-blue.png')
+
+  &_icon
+    padding-left: 30px
+    padding-right: 30px
+
+    i
+      display: inline-block
+      vertical-align: middle
+      background-size: contain
+      background-repeat: no-repeat
+      margin-right: 15px
+
+      &.prev
+        width: 6px
+        height: 11px
+
+        margin-top: -4px
+        background-image: url('../img/general/prev-black.png')
+        
+    &:hover 
+      
+      i.prev
+        background-image: url('../img/general/prev-white.png')

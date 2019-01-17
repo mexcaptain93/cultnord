@@ -119,6 +119,9 @@ u
     font-family: 'Playfair'
     font-weight: bold
 
+    a
+      text-decoration: none
+
     &::after
       content: ' — '
       color: $brown_light
@@ -135,7 +138,7 @@ u
     align-items: center
 
   &__item
-    margin-right: 11px
+    margin-right: 2px
 
     color: $gray_light3
     font-size: 12px
@@ -145,10 +148,14 @@ u
     a
       text-decoration: underline
 
+      &:hover
+        text-decoration: none
+
 
 
     &::after
       content: ' — '
+      margin: 0 2px
       color: $brown_light
 
     &:last-child
@@ -157,7 +164,66 @@ u
       &::after
         content: none
 
+.file
+  display: flex
+  align-items: flex-start
 
+  &__icon
+    margin-right: 16px
+    max-width: 32px
+    max-height: 40px
 
+  &__text
+    max-width: 230px
+    margin-top: -4px
 
+    font-family: 'Playfair'
+    font-size: 13px
+    line-height: 20px
+    letter-spacing: 0
 
+  &__name
+    font-weight: bold
+    color: $gray
+
+  &__bottom
+    display: flex
+
+  &__download
+    margin-right: 5px
+
+    color: $gray_dark2
+    font-weight: normal
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+
+  &__meta
+    font-size: 13px
+    color: $gray_light
+
+.list-block
+  max-width: 230px
+
+  &__title
+    margin-bottom: -10px
+
+    font-size: 18px
+    line-height: 30px
+    letter-spacing: 0
+    color: $gray
+
+    a
+      text-underline-position: initial
+
+  &__sub
+    color: alpha($gray, 0.41)
+    font-size: 14px
+    line-height: 36px
+
+  &__text
+    color: $gray
+    font-size: 11px
+    line-height: 16px
+    letter-spacing: 0

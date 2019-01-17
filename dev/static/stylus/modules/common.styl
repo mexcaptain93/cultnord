@@ -105,7 +105,9 @@ u
   letter-spacing: 0
 
 .pagination
-  display: flex
+
+  &__list
+    display: flex
 
   &__item
     margin-right: 7px
@@ -122,6 +124,35 @@ u
       color: $brown_light
 
     &:last-child
+
+      &::after
+        content: none
+
+.breadcrumbs
+
+  &__list
+    display: flex
+    align-items: center
+
+  &__item
+    margin-right: 11px
+
+    color: $gray_light3
+    font-size: 12px
+    line-height: 28px
+    letter-spacing: .3px
+
+    a
+      text-decoration: underline
+
+
+
+    &::after
+      content: ' — '
+      color: $brown_light
+
+    &:last-child
+      text-decoration: none
 
       &::after
         content: none

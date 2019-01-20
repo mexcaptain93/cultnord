@@ -1,6 +1,6 @@
 .index-page
 
-  .slider
+  .slider-top
     margin-bottom: 100px
 
     &__list
@@ -13,6 +13,7 @@
       background-position: center center
 
   .sections
+    margin-bottom: 23px
 
     &__list
       display: flex
@@ -39,6 +40,9 @@
       &:last-child
         margin-right: 0
 
+        @media $phone
+          margin-bottom: 0
+
     &__image
       position: absolute
       width: 112px
@@ -64,3 +68,132 @@
       font-size: 14px
       line-height: 20px
 
+  .slider-main
+    position: relative
+
+    @media $tablet
+      padding: 0 60px
+
+    @media $phone
+      padding: 0 30px
+
+    a
+      text-decoration: none
+
+    &__prev, &__next
+      cursor: pointer
+      position: absolute
+      top: 50%
+      right: calc(100% + 15px)
+      transform: translateY(-50%)
+      width: 44px
+      height: 85px
+      background-image: url('../img/general/arrow-index-main-slider-left.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+      @media $tablet
+        right: calc(100% - 45px)
+
+      @media $tablet_small
+        width: 22px
+        right: calc(100% - 35px)
+
+      @media $phone
+        right: calc(100% - 25px)
+
+    &__next
+      background-image: url('../img/general/arrow-index-main-slider-right.png')
+      right: auto
+      left: calc(100% + 15px)
+
+      @media $tablet
+        left: calc(100% - 45px)
+
+      @media $tablet_small
+        left: calc(100% - 35px)
+
+      @media $phone
+        left: calc(100% - 25px)
+
+
+
+    &__item
+      display: flex
+
+      @media $tablet_small
+        flex-direction: column
+
+    &__left
+      flex-grow: 1
+
+      @media $tablet_small
+        width: 100%
+        height: 300px
+
+    &__image
+      height: 100%
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+
+    &__right
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 288px
+      height: 375px
+      border: 1px solid $brown_light
+      border-left-width: 0
+      background-color: $gray_light4
+      padding: 13px 32px 5px 39px
+
+      @media $tablet_small
+        width: 100%
+        height: auto
+        border-left-width: 1px
+        padding: 15px
+
+    &__title
+      margin-bottom: 19px
+
+      color: $gray
+      font-size: 24px
+      line-height: 20px
+      letter-spacing: 2.4px
+      font-family: 'Playfair'
+      font-weight: bold
+      text-transform: uppercase
+
+    &__descr
+      margin-bottom: 18px
+      color: $black
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0
+
+    &__link
+      border-top: 1px solid $gray_light5
+      padding-top: 15px
+
+      color: $brown2
+      font-size: 14px
+      line-height: 20px
+      font-style: italic
+      letter-spacing: 0
+      text-decoration: underline
+
+      &::before
+        content: ''
+        width: 12px
+        height: 20px
+        display: inline-block
+        vertical-align: top
+        margin-right: 16px
+        background-image: url('../img/general/bookmark-blue.png')
+
+      a, span
+        display: inline-block
+        vertical-align: top
+        max-width: 185px

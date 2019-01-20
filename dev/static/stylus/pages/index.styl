@@ -1,6 +1,7 @@
 .index-page
 
   .slider
+    margin-bottom: 100px
 
     &__list
       width: 100%
@@ -10,4 +11,56 @@
       padding-bottom: 56%;
       background-size: cover;
       background-position: center center
+
+  .sections
+
+    &__list
+      display: flex
+
+      @media $phone
+        flex-wrap: wrap
+
+    &__item
+      position: relative
+      width: calc((100% - 32px) / 3)
+      margin-right: 16px
+      border: 1px solid $brown_light
+      padding-top: 54px
+      padding-bottom: 25px
+
+      text-decoration: none
+      text-align: center
+
+      @media $phone
+        width: 100%
+        margin-right: 0
+        margin-bottom: 60px
+
+      &:last-child
+        margin-right: 0
+
+    &__image
+      position: absolute
+      width: 112px
+      top: 0
+      left: 50%
+      transform: translate(-50%, -60%)
+      background-color: $white
+
+    &__title
+      margin-bottom: 15px
+
+      color: $gray
+      font-size: 22px
+      line-height: 20px
+      letter-spacing: 2.2px
+      text-transform: uppercase
+
+    &__descr
+      max-width: 180px
+      margin: 0 auto
+
+      color: $gray_light3
+      font-size: 14px
+      line-height: 20px
 

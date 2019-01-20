@@ -1,24 +1,48 @@
 extends ../layout/main
 
 block variables
-	- var title = 'Главная страница'
-	- var pageClass = 'index-page'
+    - var title = 'Главная страница'
+    - var pageClass = 'index-page'
 
 block script
-	script(src='static/js/slick.min.js')
+    script(src='static/js/slick.min.js')
 
 block content
-	.index-page__slider.slider
-		.slider__list.js-index-slider
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
-			.slider__item
-				.slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')
+    .index-page__slider.slider
+        .slider__list.js-index-slider
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
+            .slider__item
+                .slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')
+
+    .index-page__sections.sections
+        .sections__list.container.container_small
+            a(href='#').sections__item
+                .sections__image
+                    img(src='static/img/content/index-section-1.png' alt='Факты')
+                .sections__title
+                    span Факты
+                .sections__descr
+                    span Шатровые храмы Русского&nbsp;Севера
+            a(href='#').sections__item
+                .sections__image
+                    img(src='static/img/content/index-section-2.png' alt='События')
+                .sections__title
+                    span События
+                .sections__descr
+                    span 80 лет Архангельской области
+            a(href='#').sections__item
+                .sections__image
+                    img(src='static/img/content/index-section-3.png' alt='Книга')
+                .sections__title
+                    span Книга
+                .sections__descr
+                    span А. Борисов «В&nbsp;гостях&nbsp;у&nbsp;самоедов»

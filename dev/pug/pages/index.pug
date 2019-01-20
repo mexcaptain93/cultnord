@@ -4,5 +4,21 @@ block variables
 	- var title = 'Главная страница'
 	- var pageClass = 'index-page'
 
+block script
+	script(src='static/js/slick.min.js')
+
 block content
-	h1 Культурное наследие
+	.index-page__slider.slider
+		.slider__list.js-index-slider
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-1.jpg")')
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-2.jpg")')
+			.slider__item
+				.slider__img(style='background-image: url("static/img/content/index-slide-3.jpg")')

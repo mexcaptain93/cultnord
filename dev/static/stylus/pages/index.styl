@@ -70,6 +70,7 @@
 
   .slider-main
     position: relative
+    margin-bottom: 65px
 
     @media $tablet
       padding: 0 60px
@@ -197,3 +198,71 @@
         display: inline-block
         vertical-align: top
         max-width: 185px
+
+  .specproject
+    margin: 0 auto
+    display: flex
+    align-items: center
+
+    @media $phone
+      flex-direction: column
+
+
+    &__label
+      margin-left: 110px
+      flex-grow: 0
+      flex-shrink: 0
+      width: 267px
+      height: 60px
+      padding-left: 40px
+      background-color: $brown_light
+
+      font-family: 'Playfair'
+      font-weight: bold
+      color: $white
+      font-size: 24px
+      line-height: 60px
+      letter-spacing: 0
+
+      @media $tablet
+        margin-left: 0
+
+      @media $tablet_small
+        display: none
+
+    &__icon
+      flex-grow: 0
+      flex-shrink: 0
+      width: 152px
+      height: 152px
+      border-radius: 50%
+      border: 2px solid $brown_light
+      background-color: white
+      background-image: url('../img/general/specproject-icon.png')
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: 100px
+      position: relative
+      left: -31px
+
+      @media $tablet_small
+        left: 0
+        margin-right: 10px
+
+      @media $phone
+        margin-right: 0
+        width: 80px
+        height: 80px
+        background-size: 60px
+
+    &__title
+      font-family: 'Playfair'
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+      color: $gray
+      letter-spacing: 0
+
+      @media $phone
+        text-align: center
+

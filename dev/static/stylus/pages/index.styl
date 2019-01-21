@@ -266,3 +266,51 @@
       @media $phone
         text-align: center
 
+  .timeline
+    display: flex
+    width: 640px
+    margin: 0 auto
+
+    &__left
+      width: 283px
+      border-right: 3px dotted $blue2
+
+    &__right
+      width: 320px
+
+
+    .event
+      margin-bottom: 33px
+
+      &:last-child
+        margin-bottom: 0
+
+      &__year
+        margin-bottom: 16px
+
+        color: $blue2
+        font-family: 'PTSerif'
+        font-weight: bold
+        font-size: 48px
+        line-height: 30px
+        letter-spacing: 0
+
+      &__name
+        max-width: 235px
+        margin-bottom: 8px
+
+        color: $black
+        font-size: 18px
+        line-height: 22px
+        font-family: 'PTSerif'
+        font-weight: bold
+        letter-spacing: 0
+
+      &__descr
+        max-width: 235px
+        color: $gray_light3
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: 0
+
+

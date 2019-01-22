@@ -200,7 +200,7 @@
         max-width: 185px
 
   .specproject
-    margin: 0 auto
+    margin: 0 auto 15px
     display: flex
     align-items: center
 
@@ -268,22 +268,125 @@
 
   .timeline
     display: flex
-    width: 640px
-    margin: 0 auto
+    max-width: 710px
+    padding-left: 77px
+    padding-right: 0
+    margin: 0 auto 80px
 
-    &__left
-      width: 283px
-      border-right: 3px dotted $blue2
+    @media $tablet
+      padding-left: 16px
+      padding-right: 16px
 
-    &__right
-      width: 320px
+    @media $tablet_small
+      max-width: 290px
 
+    @media $phone
+      max-width: 260px
 
-    .event
-      margin-bottom: 33px
+    &__item
+      width: 100%
+      max-width: 283px
+      margin-bottom: 32px
 
       &:last-child
         margin-bottom: 0
+
+      &:nth-child(2n)
+        max-width: 350px
+
+        @media $tablet_small
+          max-width: 283px
+
+        @media $phone
+          max-width: 260px
+
+
+        .event
+          position: relative
+          top: 180px
+          padding-left: 100px
+
+          @media $tablet_small
+            top: 0
+            padding-left: 0
+
+          &::after
+            right: auto
+            left: -6px
+
+            @media $tablet_small
+              left: auto
+              right: -28px
+
+          &::before
+            right: auto
+            left: 9px
+            width: 75px
+
+            @media $tablet_small
+              right: -10px
+              left: auto
+              width: 144px
+
+            @media $phone
+              width: 110px
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      position: relative
+      padding-bottom: 15px
+
+      @media $tablet_small
+        flex-direction: column
+        flex-wrap: nowrap
+        width: 100%
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 16px
+        bottom: 0
+        left: 280px
+        width: 3px
+        background-image: url('../img/general/timeline-line.png')
+        background-repeat: repeat-y
+
+        @media $phone
+          left: 250px
+
+    .event
+      position: relative
+
+      &::after
+        content: ''
+        width: 9px
+        height: 9px
+        display: block
+        background-color: $blue2;
+        position: absolute
+        top: 13px
+        right: -3px
+
+        @media $tablet_small
+          right: -28px
+
+      &::before
+        content: ''
+        width: 144px
+        height: 1px
+        background-color: $gray_light2
+        display: block
+        position: absolute
+        top: 17px
+        right: 15px
+
+        @media $tablet_small
+          right: -10px
+
+        @media $phone
+          width: 110px
 
       &__year
         margin-bottom: 16px

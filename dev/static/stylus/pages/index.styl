@@ -422,6 +422,10 @@
       padding-left: 50px
       padding-right: 50px
 
+    @media $phone
+      padding-left: 10px
+      padding-right: 10px
+
     &__wrap
       display: flex
       position: relative
@@ -442,6 +446,11 @@
       @media $tablet_small
         left: 0
 
+    &__text
+
+      @media $tablet_small
+        text-align: center
+
 
     &__title
       display: inline-block
@@ -455,6 +464,10 @@
       letter-spacing: 0
       font-family: 'Playfair'
       font-weight: bold
+
+      @media $phone
+        padding-left: 10px
+        padding-right: 10px
 
       span
         position: relative
@@ -481,8 +494,16 @@
       letter-spacing: 0
       color: $white
 
+      @media $phone
+        padding-left: 10px
+        padding-right: 10px
+
     &__btn
       padding-left: 17px
+
+      @media $phone
+        padding-left: 10px
+        padding-right: 10px
 
       .button
 
@@ -510,6 +531,13 @@
       font-size: 14px
       line-height: 18px
       letter-spacing: 1.4px
+
+      @media $phone
+        transform: rotate(0)
+        top: auto
+        bottom: 100%
+        left: auto
+        right: 0
 
       a
         text-decoration: none

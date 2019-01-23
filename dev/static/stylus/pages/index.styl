@@ -666,6 +666,7 @@
 
 
   .fests
+    margin-bottom: 85px
 
     &__heading
       @extend .like-h1
@@ -808,5 +809,39 @@
 
         button
           background-color: $brown_light
+          
+  .banner
+    height: 177px
+    width: 100%
+    max-width: 944px
+    display: flex
+    align-items: center
+    border: 2px solid $brown_light
+    background-image: url('../img/general/banner-bg.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+    &__img
+      padding: 0 36px
+      flex-shrink: 0
+
+    &__text
+      padding: 1px 50px 10px 40px
+      color: $brown3
+      font-family: 'PTSerif'
+      font-size: 18px
+      line-height: 24px
+      letter-spacing: 0
+      text-align: center
+
+    &__btn
+      text-align: center
+
+      .button
+        border-width: 2px
+        font-family: 'PTSerif'
+        font-size: 12px
+        line-height: 18px
 
 

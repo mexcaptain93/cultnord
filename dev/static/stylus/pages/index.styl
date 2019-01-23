@@ -670,10 +670,143 @@
     &__heading
       @extend .like-h1
 
-      margin-bottom: 25px
+      margin-bottom: 55px
 
       font-size: 24px
       line-height: 32px
       font-weight: bold
-      letter-spacing: .96px
       text-align: center
+
+    &__content
+      display: flex
+
+      @media $tablet_small
+        flex-direction: column
+
+    .closest
+      flex-shrink: 0
+      padding-left: 85px
+      padding-right: 69px
+      max-width: 272px
+      box-sizing: content-box
+      border-right: 1px solid $gray_light5
+
+      text-decoration: none
+
+      @media $tablet
+        padding-left: 20px
+        padding-right: 20px
+
+      @media $tablet_small
+        max-width: 100%
+        border-right: 0
+        border-bottom: 1px solid $gray_light5
+        padding-bottom: 20px
+        margin-bottom: 20px
+
+      &__img
+        margin-bottom: 26px
+        max-height: 216px
+        text-align: center
+
+      &__info
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 1.2px
+        color: $blue2
+        text-transform: uppercase
+        font-weight: bold
+        text-align: center
+
+      &__name
+        @extend .like-h2
+
+        font-weight: bold
+        text-align: center
+        line-height: 30px
+
+      &__date
+        font-size: 11px
+        letter-spacing: 1.1px
+
+    &__slider
+      padding-left: 55px
+      padding-bottom: 55px
+      max-width: 340px
+
+      @media $tablet
+        padding-left: 20px
+
+      @media $tablet_small
+        padding-left: 0
+        max-width: 100%
+        margin: 0 auto
+
+
+    .fest
+      display: flex
+      margin-bottom: 31px
+
+      text-decoration: none
+
+      &:last-child
+        margin-bottom: 0
+
+      &__img
+        flex-shrink: 0
+
+      &__text
+        padding-left: 34px
+
+      &__location
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 1.2px
+        color: $blue2
+        text-transform: uppercase
+        font-weight: bold
+
+      &__date
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 0.6px
+        color: $blue2
+        text-transform: uppercase
+        font-weight: bold
+
+      &__name
+        @extend .like-h2
+
+        max-width: 180px
+
+        font-weight: bold
+        font-size: 20px
+        line-height: 26px
+
+    .slick-dots
+      display: flex!important
+      justify-content: center
+      margin-top: 22px
+
+      button
+        font-size: 0
+        line-height: 0
+        width: 12px
+        height: 12px
+        background-color: $white
+        border-radius: 6px
+        border: 1px solid $brown_light
+        padding: 0
+
+      li
+        margin-right: 12px
+
+        &:last-child
+          margin-right: 0
+
+      .slick-active
+
+        button
+          background-color: $brown_light
+
+

@@ -6,7 +6,8 @@ function indexSliders() {
     var sliderTop = $('.js-index-slider-top'),
         sliderMain = $('.js-index-slider-main'),
         sliderMainPrev = $('.js-index-slider-main-prev'),
-        sliderMainNext = $('.js-index-slider-main-next');
+        sliderMainNext = $('.js-index-slider-main-next'),
+        sliderFest = $('.js-index-slider-fest');
 
     if (sliderTop.length) {
         sliderTop.slick({
@@ -49,4 +50,13 @@ function indexSliders() {
         e.preventDefault();
         sliderMain.slick('slickNext');
     });
+
+
+    if (sliderFest.length) {
+        sliderFest.slick({
+            arrows: false,
+            adaptiveHeight: true,
+            dots: true
+        });
+    }
 }

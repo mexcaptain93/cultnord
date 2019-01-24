@@ -1003,6 +1003,112 @@
         letter-spacing: 0
         color: $white
 
+  .links
+    margin-bottom: 140px
+
+    &__wrap
+      position: relative
+      max-width: 944px
+      margin: 0 auto
+
+    &__prev
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: -41px
+      width: 20px
+      height: 21px
+      cursor: pointer
+      transform: translateY(-50%)
+      background-image: url('../img/general/links-prev.png')
+      background-size: cover
+      background-repeat: no-repeat
+
+      @media $desktop_small
+        left: -20px
+
+      @media $tablet
+        left: 0
+
+    &__next
+      position: absolute
+      z-index: 1
+      top: 50%
+      right: -41px
+      width: 20px
+      height: 21px
+      cursor: pointer
+      transform: translateY(-50%)
+      background-image: url('../img/general/links-next.png')
+      background-size: cover
+      background-repeat: no-repeat
+
+      @media $desktop_small
+        right: -20px
+
+      @media $tablet
+        right: 0
+
+    &__heading
+      @extend .like-h1
+      margin-bottom: 60px
+
+      font-size: 24px
+      line-height: 30px
+      letter-spacing: 2.4px
+      font-weight: bold
+      text-align: center
+
+    &__block
+      margin: 0 8px
+
+    &__slider
+      max-width: 100%
+
+      @media $tablet
+        padding: 0 20px
+
+    .link
+      display: block
+      width: 176px
+      height: 141px
+      padding: 12px 9px
+      border: 2px solid transparent
+      margin: 0 auto
+
+      text-align: center
+      text-decoration: none
+
+      @media $tablet_small
+        width: 160px
+
+      @media $phone
+        width: 140px
+
+      &:hover
+        border-color: $brown_light
+
+      &__img
+        height: 63px
+        margin-bottom: 2px
+
+        img
+          margin: 0 auto
+
+      &__title
+        padding: 0 10px
+
+        font-size: 14px
+        line-height: 18px
+        letter-spacing: 0
+        color: $gray_dark
+        text-decoration: none
+
+        @media $phone
+          padding: 0
+
+    .slick-arrow
+      display: none !important
 
 
 

@@ -742,6 +742,7 @@
         padding-left: 0
         max-width: 100%
         margin: 0 auto
+        width: 400px
 
 
     .fest
@@ -811,14 +812,14 @@
           background-color: $brown_light
           
   .banner
+    margin-bottom: 134px
 
 
     &__wrap
       height: 177px
       width: 100%
-      max-width: 976px
+      max-width: 944px
       margin: 0 auto
-      margin-bottom: 77px
       display: flex
       align-items: center
       border: 2px solid $brown_light
@@ -874,6 +875,97 @@
 
           .next-bold
             background-image: url('../img/general/next-bold-blue.png')
+
+
+  .unesco
+    max-width: 944px
+    padding: 85px 48px 48px
+    border: 2px solid $brown_light
+
+    &__wrap
+      position: relative
+
+
+    &__heading
+      width: 100%
+      display: flex
+      align-items: center
+      position: absolute
+      top: -145px
+      padding-left: 27px
+      background-color: $white
+
+
+    &__logo
+      flex-shrink: 0
+      margin-right: 27px
+
+    &__title
+      @extend .like-h1
+
+      font-size: 24px
+      line-height: 30px
+      letter-spacing: 2.4px
+      font-weight: bold
+      text-align: center
+
+    &__list
+      display: flex
+      justify-content: space-between
+
+    .item
+      position: relative
+      width: calc(50% - 8px)
+      padding: 38px 47px 63px
+
+      background-color: $brown2
+      text-decoration: none
+      transition: .3s ease opacity
+      margin-right: 16px
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        opacity: .7
+
+      &__img
+        position: absolute
+        z-index: 0
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: .3
+        background-size: cover
+        background-repeat: no-repeat
+
+      &__title
+        max-width: 280px
+        margin-bottom: 15px
+
+        font-family: 'Playfair'
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.6px
+        font-weight: bold
+        color: $white
+
+        &::after
+          content: ''
+          display: block
+          width: 115px
+          height: 2px
+          margin-top: 10px
+          background-color: $white
+
+      &__descr
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0
+        color: $white
+
+
 
 
 

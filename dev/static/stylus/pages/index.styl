@@ -834,7 +834,7 @@
         height: auto
 
     &__img
-      padding: 0 36px
+      padding: 0 52px
       flex-shrink: 0
 
       @media $tablet
@@ -844,7 +844,8 @@
         margin-bottom: 20px
 
     &__text
-      padding: 1px 50px 15px 40px
+      padding: 1px 0 15px 25px
+      max-width: 420px
       color: $brown3
       font-family: 'PTSerif'
       font-size: 18px
@@ -878,27 +879,45 @@
 
 
   .unesco
-    max-width: 944px
-    padding: 85px 48px 48px
-    border: 2px solid $brown_light
+    margin-bottom: 117px
+
 
     &__wrap
       position: relative
+      margin: 0 auto
+      max-width: 944px
+      padding: 85px 48px 48px
+      border: 2px solid $brown_light
 
+      @media $phone
+        padding-left: 20px
+        padding-right: 20px
 
     &__heading
-      width: 100%
+      width: calc(100% - 96px)
       display: flex
       align-items: center
       position: absolute
-      top: -145px
+      top: -60px
+      left: 50%
+      transform: translate(-50%, 0)
       padding-left: 27px
       background-color: $white
 
+      @media $tablet_small
+        top: 0
+        padding: 0 10px
+        transform: translate(-50%, -50%)
+
+      @media $phone
+        width: calc(100% - 20px)
 
     &__logo
       flex-shrink: 0
       margin-right: 27px
+
+      @media $tablet_small
+        display: none
 
     &__title
       @extend .like-h1
@@ -913,6 +932,9 @@
       display: flex
       justify-content: space-between
 
+      @media $tablet_small
+        flex-direction: column
+
     .item
       position: relative
       width: calc(50% - 8px)
@@ -922,6 +944,15 @@
       text-decoration: none
       transition: .3s ease opacity
       margin-right: 16px
+
+      @media $tablet
+        padding-left: 20px
+        padding-right: 20px
+
+      @media $tablet_small
+        width: 100%
+        margin-bottom: 20px
+        margin-right: 0
 
       &:last-child
         margin-right: 0
@@ -940,8 +971,9 @@
         background-size: cover
         background-repeat: no-repeat
 
+
       &__title
-        max-width: 280px
+        max-width: 240px
         margin-bottom: 15px
         position: relative
 
@@ -951,6 +983,9 @@
         letter-spacing: 0.6px
         font-weight: bold
         color: $white
+
+        &_wide
+          max-width: 310px
 
         &::after
           content: ''

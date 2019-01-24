@@ -681,6 +681,9 @@
     &__content
       display: flex
 
+      @media $tablet
+        justify-content: center
+
       @media $tablet_small
         flex-direction: column
 
@@ -697,6 +700,9 @@
       @media $tablet
         padding-left: 20px
         padding-right: 20px
+        max-width: none
+        width: 340px
+        box-sizing: border-box
 
       @media $tablet_small
         max-width: 100%

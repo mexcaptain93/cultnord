@@ -87,6 +87,41 @@ a
 		color: $blue
 		text-decoration: none
 
+.content-sidebar
+	display: flex
+
+	@media $tablet_small
+		flex-direction: column
+
+	.sidebar
+		width: 272px
+		margin-left: 40px
+		flex-shrink: 0
+
+		@media $tablet_small
+			margin-left: 0
+			margin-top: 40px
+			width: auto
+
+		&__block
+			margin-bottom: 52px
+
+			&:last-child
+				margin-bottom: 0
+
+		&__heading
+			border-bottom: 1px solid $brown
+			padding-bottom: 7px
+			margin-bottom: 21px
+
+			font-family: 'Playfair'
+			font-size: 20px
+			line-height: 24px
+			letter-spacing: 3px
+			text-transform: uppercase
+			color: $brown
+
+
 img
 	max-height: 100%
 	max-width: 100%

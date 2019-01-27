@@ -5,18 +5,39 @@
     &__list
       display: flex
       flex-wrap: wrap
+      padding-top: 48px
 
     &__item
       width: 272px
+      height: 217px
+      position: relative
       margin-bottom: 72px
       margin-right: 16px
+      border: 1px solid $brown_light
+      padding: 67px 15px 0
 
       &:nth-child(3n)
         margin-right: 0
 
     .subcat
 
+      &_opened
+        position: relative
+        box-shadow: 0 6px 10px 0 rgba(13, 105, 112, 0.28);
+
+
+
+
+        .subcat
+
+          &__dropdown
+            display: block
+
+
       &__title
+        margin-bottom: 31px
+        min-height: 48px
+
         color: $gray
         font-family: 'Playfair'
         font-weight: bold
@@ -26,5 +47,69 @@
         text-transform: uppercase
         text-align: center
 
-      &__list
+      &__dropdown
         display: none
+        position: absolute
+        left: -1px
+        right: -1px
+        top: 100%
+        margin-top: -1px
+        z-index: 1
+        background-color: $white
+        border: 1px solid $brown_light
+        border-top: none
+        padding: 18px 10px 37px
+        box-shadow: 0 6px 10px 0 rgba(13, 105, 112, 0.28);
+
+      &__list
+        display: block
+        margin-top: -49px
+
+
+      &__item
+        font-size: 13px
+        line-height: 30px
+        letter-spacing: 0
+        color: $gray
+
+      &__img-wrap
+        position: absolute
+        top: -50px
+        left: 50%
+        transform: translate(-50%, 0)
+
+      &__img
+        border-radius: 50%
+        width: 98px
+        height: 98px
+
+      &__text
+        padding: 0 10px
+
+        font-size: 14px
+        line-height: 18px
+        color: $gray
+        letter-spacing: 0
+        text-align: center
+        
+      &__list-link
+
+        a
+          position: relative
+
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 9px
+            right: -16px
+            width: 10px
+            height: 6px
+            background-image: url('../img/general/dropdown.png')
+            background-repeat: no-repeat
+            background-size: 100%
+
+      &__link-hide
+        display: none
+
+

@@ -1,5 +1,6 @@
 $(function () {
     indexSliders();
+    categoryDropdown();
 });
 
 function indexSliders() {
@@ -111,5 +112,16 @@ function indexSliders() {
     sliderLinksNext.on('click', function (e) {
         e.preventDefault();
         sliderLinks.slick('slickNext');
+    });
+}
+
+function categoryDropdown() {
+    $('.js-category-dd-link').on('click', function (e) {
+       e.preventDefault();
+       $('.js-category-dd').not($(this).siblings('.js-category-dd')).hide();
+       $(this).siblings('.js-category-dd').toggle();
+       $(this).parents('.subcat').toggleClass('subcat_opened');
+       $(this).find('.js-category-dd-link-show').toggle();
+       $(this).find('.js-category-dd-link-hide').toggle();
     });
 }

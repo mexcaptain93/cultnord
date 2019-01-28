@@ -1,7 +1,7 @@
 $(function () {
     indexSliders();
     categoryDropdown();
-    //paginationNoline();
+    paginationNoline();
 });
 
 $(window).resize(function () {

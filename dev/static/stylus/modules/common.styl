@@ -114,6 +114,11 @@ u
 
   &__list
     display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    &:first-letter
+      background-color: red
 
   &__item
     margin-right: 7px
@@ -125,12 +130,18 @@ u
     font-family: 'Playfair'
     font-weight: bold
 
+
     a
       text-decoration: none
 
     &::after
       content: ' — '
       color: $brown_light
+
+    &_noline
+
+      &::after
+        opacity: 0
 
     &:last-child
 

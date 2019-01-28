@@ -1,6 +1,11 @@
 $(function () {
     indexSliders();
     categoryDropdown();
+    //paginationNoline();
+});
+
+$(window).resize(function () {
+    paginationNoline();
 });
 
 function indexSliders() {
@@ -117,11 +122,34 @@ function indexSliders() {
 
 function categoryDropdown() {
     $('.js-category-dd-link').on('click', function (e) {
-       e.preventDefault();
-       $('.js-category-dd').not($(this).siblings('.js-category-dd')).hide();
-       $(this).siblings('.js-category-dd').toggle();
-       $(this).parents('.subcat').toggleClass('subcat_opened');
-       $(this).find('.js-category-dd-link-show').toggle();
-       $(this).find('.js-category-dd-link-hide').toggle();
+        e.preventDefault();
+        $('.js-category-dd').not($(this).siblings('.js-category-dd')).hide();
+        $(this).siblings('.js-category-dd').toggle();
+        $(this).parents('.subcat').toggleClass('subcat_opened');
+        $(this).find('.js-category-dd-link-show').toggle();
+        $(this).find('.js-category-dd-link-hide').toggle();
     });
+}
+
+function paginationNoline() {
+    var pagination = $('.js-pagination-noline li');
+
+    if (pagination.length) {
+        var topLast = pagination.eq(0).offset().top;
+        $('.pagination__item_noline').removeClass('pagination__item_noline');
+
+        pagination.each(function (index, val) {
+            var top = $(this).offset().top;
+
+            if (top > topLast) {
+                console.log(top, topLast)
+                console.log($(this))
+
+                $(this).prev().addClass('pagination__item_noline');
+                topLast = top;
+            }
+
+
+        });
+    }
 }

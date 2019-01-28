@@ -14,6 +14,19 @@
       margin-right: -144px
       margin-bottom: 110px
 
+      @media $desktop_small
+        margin-right: 0
+
+      @media $tablet
+        column-count: 2
+
+      @media $phone
+        column-count: auto
+
+        display: flex
+        flex-direction: column
+        align-items: center
+
     &__item
       display: inline-block
       width: 100%

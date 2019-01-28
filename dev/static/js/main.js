@@ -138,18 +138,13 @@ function paginationNoline() {
         var topLast = pagination.eq(0).offset().top;
         $('.pagination__item_noline').removeClass('pagination__item_noline');
 
-        pagination.each(function (index, val) {
+        pagination.each(function () {
             var top = $(this).offset().top;
 
             if (top > topLast) {
-                console.log(top, topLast)
-                console.log($(this))
-
                 $(this).prev().addClass('pagination__item_noline');
                 topLast = top;
             }
-
-
         });
     }
 }

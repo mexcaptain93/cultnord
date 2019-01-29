@@ -1,0 +1,50 @@
+.material-page
+
+  .quote
+    position: relative
+    display: flex
+    padding: 40px 15px 38px 37px
+    margin-right: -15px
+    background-image: url("../img/general/quote-bg.png")
+    background-size: cover
+    background-repeat: no-repeat
+
+    @media $tablet
+      margin-right: 0
+
+    @media $phone
+      padding: 20px
+
+    &__icon
+      padding-top: 5px
+      margin-right: 25px
+      flex-shrink: 0
+
+      @media $tablet
+        width: 30px
+        margin-right: 10px
+      
+      &::after
+        content: ''
+        background-image: url('../img/general/quote-ship.png')
+        width: 136px
+        height: 128px
+        background-repeat: no-repeat
+        background-size: 100%
+        position: absolute
+        bottom: 20px
+        right: 27px
+
+    &__text
+      font-family: 'Playfair'
+      font-size: 18px
+      line-height: 28px
+      letter-spacing: 0
+      color: $white
+
+      @media $phone
+        font-size: 14px
+        line-height: 24px
+
+
+

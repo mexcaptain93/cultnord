@@ -1,6 +1,11 @@
 .material-page
 
+  &__text
+    margin-bottom: 82px
+
   .quote
+    margin-top: 32px
+    margin-bottom: 48px
     position: relative
     display: flex
     padding: 40px 15px 38px 37px
@@ -14,6 +19,8 @@
 
     @media $phone
       padding: 20px
+      margin-top: 20px
+      margin-bottom: 30px
 
     &__icon
       padding-top: 5px
@@ -48,3 +55,50 @@
 
 
 
+  .image-text
+    display: flex
+    margin-top: 50px
+    margin-bottom: 64px
+
+    @media $phone
+      flex-direction: column
+
+    &__img
+      width: 320px
+      flex-shrink: 0
+      margin-right: 16px
+      text-align: center
+
+      @media $tablet
+        width: 50%
+
+      @media $tablet_small
+        max-width: 320px
+
+      @media $phone
+        margin-right: 0
+        margin-bottom: 20px
+        max-width: 100%
+        width: 100%
+
+    &__text
+      border-top: 1px solid $brown_light
+      padding-top: 26px
+
+      span
+        display: block
+        margin-bottom: 18px
+
+  .button
+    width: 307px
+    max-width: 100%
+
+  .story-in-pic
+
+    .like-h1
+      margin-bottom: 44px
+
+      font-weight: normal
+
+    &__item
+      padding-bottom: 59px

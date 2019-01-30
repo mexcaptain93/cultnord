@@ -492,6 +492,10 @@ u
     display: flex
     flex-wrap: wrap
 
+    @media $tablet_small
+      margin-left: -16px
+      justify-content: center
+
   &__item
     width: 128px
     height: 128px
@@ -501,5 +505,10 @@ u
     margin-right: 16px
     margin-bottom: 13px
 
+    @media $tablet_small
+      margin-right: 0
+      margin-left: 16px
+
     &:nth-child(even)
       margin-right: 0
+

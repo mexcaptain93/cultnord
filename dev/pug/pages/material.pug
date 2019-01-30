@@ -45,6 +45,18 @@ block content
                 a(href='#').button.button_icon.button_color Продолжение статьи #[i.next]
             .content-sidebar__sidebar.sidebar
                 .sidebar__block
+                    .sidebar__content
+                        .material-page__mini.mini
+                            .mini__list
+                                .mini__item(style='background-image: url("static/img/content/material-mini-1.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-2.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-3.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-4.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-5.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-6.jpg")')
+                                .mini__item(style='background-image: url("static/img/content/material-mini-7.jpg")')
+
+                .sidebar__block.sidebar__block_mini
                     .sidebar__heading
                         span Источники
                     .sidebar__content
@@ -63,7 +75,7 @@ block content
                             .files__item
                                 .file
                                     .file__icon
-                                        img(src='static/img/general/pdf-red.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
+                                        img(src='static/img/general/pdf.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
                                     .file__text
                                         .file__name
                                             span Щуров, Г. С. Очерки истории культуры Русского Севера
@@ -75,7 +87,7 @@ block content
                             .files__item
                                 .file
                                     .file__icon
-                                        img(src='static/img/general/pdf-red.png' alt='Культура Русского Севера: традиции и современность')
+                                        img(src='static/img/general/pdf.png' alt='Культура Русского Севера: традиции и современность')
                                     .file__text
                                         .file__name
                                             span Культура Русского Севера: традиции и современность
@@ -87,7 +99,7 @@ block content
                             .files__item
                                 .file
                                     .file__icon
-                                        img(src='static/img/general/pdf-red.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
+                                        img(src='static/img/general/pdf.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
                                     .file__text
                                         .file__name
                                             span Щуров, Г. С. Очерки истории культуры Русского Севера
@@ -99,7 +111,7 @@ block content
                             .files__item
                                 .file
                                     .file__icon
-                                        img(src='static/img/general/pdf-red.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
+                                        img(src='static/img/general/pdf.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
                                     .file__text
                                         .file__name
                                             span Щуров, Г. С. Очерки истории культуры Русского Севера
@@ -111,7 +123,7 @@ block content
                             .files__item
                                 .file
                                     .file__icon
-                                        img(src='static/img/general/pdf-red.png' alt='Народное искусство. Исследования и материалы : сборник статей')
+                                        img(src='static/img/general/pdf.png' alt='Народное искусство. Исследования и материалы : сборник статей')
                                     .file__text
                                         .file__name
                                             span Народное искусство. Исследования и материалы : сборник статей
@@ -120,6 +132,56 @@ block content
                                                 a(href='#') Скачать
                                             .file__meta
                                                 span &mdash; 24,4Mb, pdf
+                .sidebar__block
+                    .sidebar__heading
+                        span Читай больше
+                    .sidebar__content
+                        .category__files.files
+                            .files__item
+                                .file
+                                    .file__icon
+                                        img(src='static/img/general/pdf.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
+                                    .file__text
+                                        .file__name
+                                            span Арбат. Ю. А. Зелёные кони
+                                        .file__bottom
+                                            .file__download
+                                                a(href='#') Скачать
+                                            .file__meta
+                                                span &mdash; 704 KB, pdf
+                            .files__item
+                                .file
+                                    .file__icon
+                                        img(src='static/img/general/read-more-1.png' alt='Ермакова У. Истоки мезенской росписи и ее связь с другими видами северной росписи')
+                                    .file__text
+                                        a(href='#').file__name
+                                            span Ермакова У. Истоки мезенской росписи и ее связь с другими видами северной росписи
+                            .files__item
+                                .file
+                                    .file__icon
+                                        img(src='static/img/general/pdf.png' alt='Народное искусство. Исследования и материалы: сборник статей')
+                                    .file__text
+                                        .file__name
+                                            span Народное искусство. Исследования и материалы: сборник статей
+                                        .file__bottom
+                                            .file__download
+                                                a(href='#') Скачать
+                                            .file__meta
+                                                span &mdash; 11,9 MB, pdf
+                            .files__item
+                                .file
+                                    .file__icon
+                                        img(src='static/img/general/read-more-2.png' alt='Резное мастерство: виртуальная выставка')
+                                    .file__text
+                                        .file__name
+                                            span Резное мастерство: #[br] #[a(href='#') виртуальная выставка]
+                            .files__item
+                                .file
+                                    .file__icon
+                                        img(src='static/img/general/read-more-2.png' alt='Северная береста. История берестяных ремесел информационный Интернет-проект')
+                                    .file__text
+                                        .file__name
+                                            span Северная береста. История берестяных ремесел #[a(href='#') информационный Интернет-проект]
     .material-page__story-in-pic.container.container_small.story-in-pic
         h1.like-h1 Другие статьи раздела
 

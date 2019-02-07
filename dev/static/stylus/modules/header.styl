@@ -164,5 +164,97 @@
         letter-spacing: 0
         color: $gray
 
+  .dropdown
+    display: none
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    background-color: alpha($brown_light, .95)
+    padding-top: 76px
 
+    @media $tablet
+      padding-top: 44px
+
+    &_opened
+      display: block
+
+    &__wrap
+      position: relative
+      overflow: auto
+    
+    &__close
+      display: block
+      position: absolute
+      top: -13px
+      right: 82px
+      width: 19px
+      height: 19px
+      box-sizing: content-box
+      padding: 10px
+      background-position: center center
+      background-repeat: no-repeat
+      background-image: url('../img/general/i-close-white.png')
+
+    &__columns
+      display: flex
+      flex-wrap: wrap
+
+    &__col
+      margin-right: 47px
+
+    .group
+      width: 288px
+      margin-bottom: 25px
+
+      &__name
+        display: block
+        border-bottom: 1px solid $white
+        padding-bottom: 20px
+
+        color: $white
+        text-transform: uppercase
+        font-size: 18px
+        line-height: 18px
+        letter-spacing: 1.8px
+        text-decoration: none
+
+      &__link
+        width: 50%
+        margin-bottom: 14px
+
+        font-size: 14px
+        color: $white
+
+        a
+          text-decoration: none
+
+      &__links
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-top: 19px
+
+        &_arrow
+
+          .group__link
+            width: auto
+            position: relative
+
+            &::after
+              content: ''
+              display: block
+              width: 12px
+              height: 7px
+              background-image: url('../img/general/dropdown-white.png')
+              position: absolute
+              top: 6px
+              right: 0
+
+
+
+      &__col
+        width: 130px
 

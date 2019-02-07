@@ -78,7 +78,7 @@ header.header
                 img(src='static/img/general/logo.png' alt='Культурное наследие')
         .header__burger-search
             .header__burger
-                a.burger(href='#')
+                a.burger(href='#').js-header-dropdown-open
                     span
             .header__search
                 a(href='#').js-header-search-open
@@ -88,5 +88,60 @@ header.header
                         .search-form__input
                             input(type='text' placeholder='Я ищу...')
                         a(href='#').search-form__close.js-header-search-close
-
-
+    .header__dropdown.dropdown.js-header-dropdown
+        .dropdown__wrap.container
+            .dropdown__columns
+                .dropdown__col
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Наследие
+                        ul.group__links.group__links_arrow
+                            .group__col
+                                li.group__link
+                                    a(href='#') Фольклор, литература
+                                li.group__link
+                                    a(href='#') Художественные промыслы
+                                li.group__link
+                                    a(href='#') Изобразительное искусство
+                            .group__col
+                                li.group__link
+                                    a(href='#') Музыка
+                                li.group__link
+                                    a(href='#') Театр
+                                li.group__link
+                                    a(href='#') Зодчество
+                                li.group__link
+                                    a(href='#') Традиции и быт поморов
+                .dropdown__col
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Персоны
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Библиотека
+                        ul.group__links
+                            li.group__link
+                                a(href='#') Статьи
+                            li.group__link
+                                a(href='#') Надо почитать
+                            li.group__link
+                                a(href='#') Библиография
+                            li.group__link
+                                a(href='#') Интернет-путеводители
+                .dropdown__col
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Истории в картинках
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Викторины
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Конкурсы
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Фестивали и праздники
+                    .dropdown__group.group
+                        a(href='#').group__name
+                            span Узелки на память
+            a(href='#').dropdown__close.js-header-dropdown-close

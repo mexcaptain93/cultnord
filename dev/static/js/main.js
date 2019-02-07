@@ -2,6 +2,7 @@ $(function () {
     indexSliders();
     categoryDropdown();
     paginationNoline();
+    headerSearch();
 });
 
 $(window).resize(function () {
@@ -147,4 +148,19 @@ function paginationNoline() {
             }
         });
     }
+}
+
+function headerSearch() {
+    var opener = $('.js-header-search-open'),
+        closer = $('.js-header-search-close'),
+        form = $('.js-header-search');
+
+    opener.on('click', function () {
+       form.addClass('search-form_opened');
+       console.log()
+    });
+
+    closer.on('click', function () {
+       form.removeClass('search-form_opened');
+    });
 }

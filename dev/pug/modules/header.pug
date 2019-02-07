@@ -81,6 +81,12 @@ header.header
                 a.burger(href='#')
                     span
             .header__search
-                a(href='#')
+                a(href='#').js-header-search-open
                     img(src='static/img/general/search.png' alt='Поиск')
+                .header__search-form.search-form.js-header-search
+                    form.search-form__form
+                        .search-form__input
+                            input(type='text' placeholder='Я ищу...')
+                        a(href='#').search-form__close.js-header-search-close
+
 

@@ -36,6 +36,7 @@
       display: none
 
   &__burger-search
+    position: relative
     width: 400px
     display: flex
     align-items: center
@@ -118,7 +119,50 @@
             background-repeat: no-repeat
             background-size: contain
 
+  .search-form
+    display: none
+    position: absolute
+    right: 0
+    top: 0
+    width: 432px
+    max-width: calc(100vw - 32px)
+    background-color: $white
 
+    &_opened
+      display: block
+
+    &__form
+      display: flex
+      align-items: center
+      position: relative
+
+    &__close
+      position: absolute
+      padding: 10px
+      top: 3px
+      right: 0
+      width: 13px
+      height: 13px
+      box-sizing: content-box
+      background-position: center center
+      background-repeat: no-repeat
+      background-image: url('../img/general/i-close.png')
+      cursor: pointer
+
+    &__input
+      width: 100%
+
+      input
+        width: 100%
+        padding: 6px 14px
+        border: none
+        border-bottom: 1px solid $brown_light
+
+        font-family: 'PTSans'
+        font-size: 20px
+        line-height: 20px
+        letter-spacing: 0
+        color: $gray
 
 
 

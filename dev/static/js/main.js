@@ -4,6 +4,7 @@ $(function () {
     paginationNoline();
     headerSearch();
     headerDropdown();
+    selects();
 });
 
 $(window).resize(function () {
@@ -180,4 +181,10 @@ function headerDropdown() {
         dd.removeClass('dropdown_opened');
         $('body').removeClass('stop-scroll');
     });
+}
+
+function selects() {
+    if($().select2) {
+        $('.select').select2();
+    }
 }

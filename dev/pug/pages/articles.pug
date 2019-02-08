@@ -1,0 +1,109 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Статьи'
+    - var pageClass = 'articles-page'
+
+block script
+    script(src='static/js/select2.min.js')
+
+block content
+    .breadcrumbs
+        .container.container_small
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='/')
+                        img(src='static/img/general/home.png' alt='Главная')
+                li.breadcrumbs__item
+                    a(href='#') Статьи
+    .container.container_small
+        h1.like-h1 Статьи
+    .articles-page__filter-add.container
+        .articles-page__top-line
+            .articles-page__filter.filter
+                .filter__list
+                    .filter__item
+                        select.select
+                            option(value='Автор статьи') Автор статьи
+                            option(value='Пётр Иванов') Петр Иванов
+                    .filter__item
+                        select.select
+                            option(value='Тема статьи') Тема статьи
+                            option(value='История') История
+            .articles-page__add
+                a(href='#').button.button_color Добавить статью
+    .articles-page__list.container
+        .articles-page__item.article
+            .article__title
+                a(href='#') История о знаменитом уроженце Емецкой земли композиторе Александре
+            .article__author
+                a(href='#') Белоусов П.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span С XII века началось проникновение русскоязычного населения сначала с Новгородчины, затем с Верхневолжья в более северные районы. К концу XV века это проникновение становится миграцией в целях постоянного заселения нового ...
+        .articles-page__item.article
+            .article__title
+                a(href='#') Сарафан: от находки к исследованию
+            .article__author
+                a(href='#') Бурянина М.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span В итоге в национально-географическое, а затем и политическое понятие «Русь» начинает входить неотъемлемой частью понятие «Русский Север». В процессе освоения обширных регионов Севера пришлым русским...
+        .articles-page__item.article
+            .article__title
+                a(href='#') Мой край, мое поморье - сокровищница народной культуры и творчества
+            .article__author
+                a(href='#') Воробьёва П.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span В процессе освоения обширных регионов Севера пришлым русским населением сложилась новая симбиотическая поморская культура на основе взаимодействия разных культурных компонентов, сложившихся...
+        .articles-page__item.article
+            .article__title
+                a(href='#') История о знаменитом уроженце Емецкой земли композиторе Александре
+            .article__author
+                a(href='#') Белоусов П.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span С XII века началось проникновение русскоязычного населения сначала с Новгородчины, затем с Верхневолжья в более северные районы. К концу XV века это проникновение становится миграцией в целях постоянного заселения нового ...
+        .articles-page__item.article
+            .article__title
+                a(href='#') Сарафан: от находки к исследованию
+            .article__author
+                a(href='#') Бурянина М.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span В итоге в национально-географическое, а затем и политическое понятие «Русь» начинает входить неотъемлемой частью понятие «Русский Север». В процессе освоения обширных регионов Севера пришлым русским...
+        .articles-page__item.article
+            .article__title
+                a(href='#') Мой край, мое поморье - сокровищница народной культуры и творчества
+            .article__author
+                a(href='#') Воробьёва П.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span В процессе освоения обширных регионов Севера пришлым русским населением сложилась новая симбиотическая поморская культура на основе взаимодействия разных культурных компонентов, сложившихся...
+        .articles-page__item.article
+            .article__title
+                a(href='#') История о знаменитом уроженце Емецкой земли композиторе Александре
+            .article__author
+                a(href='#') Белоусов П.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span С XII века началось проникновение русскоязычного населения сначала с Новгородчины, затем с Верхневолжья в более северные районы. К концу XV века это проникновение становится миграцией в целях постоянного заселения нового ...
+        .articles-page__item.article
+            .article__title
+                a(href='#') Сарафан: от находки к исследованию
+            .article__author
+                a(href='#') Бурянина М.
+            .article__date
+                span 20 марта 2018
+            .article__preview
+                span В итоге в национально-географическое, а затем и политическое понятие «Русь» начинает входить неотъемлемой частью понятие «Русский Север». В процессе освоения обширных регионов Севера пришлым русским...
+
+

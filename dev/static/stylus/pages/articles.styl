@@ -1,0 +1,122 @@
+.articles-page
+
+  &__top-line
+    display: flex
+    justify-content: space-between
+    margin-bottom: 55px
+
+    @media $tablet
+      flex-direction: column-reverse
+      justify-content: center
+      align-items: center
+
+  &__filter-add
+    max-width: 976px
+
+  .filter
+    flex-grow: 1
+
+    &__list
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+      @media $tablet
+        justify-content: center
+
+
+    &__item
+      margin-bottom: 20px
+
+      @media $tablet
+        margin-right: 20px
+        margin-left: 20px
+
+      @media $phone
+        margin-right: 0
+        margin-left: 0
+
+
+  &__add
+    width: 271px
+    margin-left: 64px
+
+    @media $tablet
+      margin-left: 0
+      margin-bottom: 40px
+
+
+    .button
+      width: 100%
+
+  &__list
+    max-width: 976px
+    margin-bottom: 110px
+    display: flex
+    flex-wrap: wrap
+
+
+  .article
+    max-width: 271px
+    margin-right: 65px
+    margin-bottom: 43px
+
+    @media $tablet
+      max-width: calc(33.3% - 50px)
+
+    @media $tablet_small
+      max-width: calc(50% - 20px)
+      margin-right: 40px
+
+    @media $phone
+      max-width: 100%
+      margin-right: 0
+
+    &:nth-child(3n)
+      margin-right: 0
+
+      @media $tablet_small
+        margin-right: 40px
+
+      @media $phone
+        margin-right: 0
+
+    &:nth-child(even)
+
+      @media $tablet_small
+        margin-right: 0
+
+    &__title
+      margin-bottom: 5px
+
+      font-size: 18px
+      line-height: 24px
+      letter-spacing: 0
+      font-family: 'Playfair'
+      color: $gray
+
+    &__author
+      color: $blue
+      font-size: 18px
+      line-height: 24px
+      font-family: 'Playfair'
+
+      a
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+    &__date
+      margin-bottom: 2px
+
+      font-size: 14px
+      line-height: 36px
+      color: alpha($gray, 0.41)
+      letter-spacing: 0
+
+    &__preview
+      font-size: 11px
+      line-height: 16px
+      letter-spacing: 0
+      color: $gray

@@ -32,15 +32,27 @@
     padding-bottom: 67px
     margin-bottom: 63px
 
+    @media $tablet_small
+      flex-direction: column
+
     &_wide
       position: relative
 
       .contest
 
+        &__title
+          padding-right: 250px
+
+          @media $tablet_small
+            padding-right: 0
+
         &__right
           position: absolute
           top: 0
           right: 0
+
+          @media $tablet_small
+            position: static
 
 
     &:last-child
@@ -51,6 +63,10 @@
       margin-left: 30px
       padding-top: 5px
       flex-shrink: 0
+
+      @media $tablet_small
+        margin-left: 0
+        margin-top: 20px
 
     &__title
       margin-bottom: 17px

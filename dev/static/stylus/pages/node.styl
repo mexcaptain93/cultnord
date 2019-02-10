@@ -35,10 +35,16 @@
     width: 100%
     margin: 50px 0 16px
 
+    @media $phone
+      flex-direction: column
+
     &__block
       max-width: 250px
       margin-right: 40px
       margin-bottom: 0
+
+      @media $phone
+        max-width: none
 
       &:last-child
         margin-right: 0
@@ -58,11 +64,14 @@
     margin-bottom: 53px
 
     &__text
+      padding-right: 20px
+
       font-family: 'Playfair'
       font-size: 16px
       line-height: 18px
       letter-spacing: 0
       color: $gray
+
 
     &__list
       display: flex
@@ -79,11 +88,29 @@
     justify-content: space-between
     margin-bottom: 100px
 
+    @media $phone
+      flex-direction: column
+
     &__prev
       max-width: 255px
 
+      @media $tablet_small
+        padding-right: 10px
+
+      @media $phone
+        max-width: none
+        margin-bottom: 40px
+        padding-right: 0
+
     &__next
       max-width: 255px
+
+      @media $tablet_small
+        padding-left: 10px
+
+      @media $phone
+        max-width: none
+        padding-left: 0
 
     &__btn
       margin-bottom: 30px
@@ -92,6 +119,21 @@
         padding-left: 20px
         padding-right: 20px
         width: 100%
+
+        @media $tablet_small
+          padding-left: 5px
+          padding-right: 5px
+
+        i
+
+          @media $tablet_small
+            margin-right: 5px
+
+          &.next
+
+            @media $tablet_small
+              margin-right: 0
+              margin-left: 5px
 
     &__title
       margin-bottom: 11px

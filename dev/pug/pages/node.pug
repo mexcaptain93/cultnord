@@ -1,0 +1,140 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Поморские праздники'
+    - var pageClass = 'node-page'
+
+block content
+    .breadcrumbs
+        .container.container_small
+            .breadcrumbs__list
+                span.breadcrumbs__item
+                    a(href='/')
+                        img(src='static/img/general/home.png' alt='Главная')
+                span.breadcrumbs__item
+                    a(href='#') Узелки на память
+                span.breadcrumbs__item
+                    span Поморские праздники
+    .container.container_small
+        h1.like-h1 Поморские праздники
+        .node-page__image.image
+            .image__img
+                img(src='static/img/content/node-image.jpg' alt='Отправление поморов на промыслы в конце 19 века')
+            .image__hint
+                span Отправление поморов на промыслы в конце 19 века
+        p Праздничной культуре также отводилось большое место в жизни поморов. На протяжении столетий праздничная культура, пронизанная архаическими верованиями народа, передаваясь из поколения в поколение, постоянно трансформировалась, дополняясь новыми элементами, и с течением времени всё больше сливаясь с православной верой. Иногда происходило огосударствление праздника, превращение его в официально-парадное торжество (интересно, что в совокупности русский праздничный календарь составлял в среднем 100 дней, а в некоторых областях Русского Севера - от 120 до 150).
+        p Прежде всего, бытовали общерусские праздники и обряды, определяемые церковным календарем: Святки, Рождество, Крещение, Пасха, Семик, Троица и т.д. Кроме них, было множество местных праздников и связанных с ними обрядов и обычаев - это праздники престольные, обетные (по обязательству); съезжие (гостинные, гулевые, званые), уличные гулянья. Особенностью Поморья были так называемые пивные праздники, связанные с интереснейшим явлением социального значения - пивоварением. Важное значение, имели обычаи и обряды семейного цикла - свадебные, родильно-крестильные, похоронно-поминальные, а также аграрные праздники, приуроченные к посевным работам и сбору урожая.
+        p В Архангельске празднества устраивались с большим размахом. Они традиционно включали в себя церковное богослужение и литургию с обязательным шествием, торжественные заседания и балы в Благородном собрании, грандиозные маскарады, народные гуляния, фейерверки. Особенно отмечались памятные даты и юбилеи, связанные с историей и экономической деятельностью. Традиции городских праздников Архангельска были тесно связаны с портом. Празднично отмечался спуск корабля на воду, в домах моряков устраивались торжественные проводы.
+        .sidebar
+            .sidebar__block
+                .sidebar__heading
+                    span Материалы
+                .sidebar__content
+                    .category__files.files
+                        .files__item
+                            .file
+                                .file__icon
+                                    img(src='static/img/general/pdf.png' alt='Щуров, Г. С. Очерки истории культуры Русского Севера')
+                                .file__text
+                                    .file__name
+                                        span Щуров, Г. С. Очерки истории культуры Русского Севера
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 24,4Mb, pdf
+                        .files__item
+                            .file
+                                .file__icon
+                                    img(src='static/img/general/pdf.png' alt='Культура Русского Севера: традиции и современность')
+                                .file__text
+                                    .file__name
+                                        span Культура Русского Севера: традиции и современность
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 11,5Mb, pdf
+                        .files__item
+                            .file
+                                .file__icon
+                                    img(src='static/img/general/pdf.png' alt='Арбат, Ю. А. Зеленые кони')
+                                .file__text
+                                    .file__name
+                                        span Арбат, Ю. А. Зеленые кони
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 24,4Mb, pdf
+                        .files__item
+                            .file
+                                .file__icon
+                                    img(src='static/img/general/pdf.png' alt='Народное искусство. Исследования и материалы : сборник статей')
+                                .file__text
+                                    .file__name
+                                        span Народное искусство. Исследования и материалы : сборник статей
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 24,4Mb, pdf
+            .sidebar__block
+                .sidebar__heading
+                    span Читай больше
+                .sidebar__content
+                    .category__files.files
+                        .files__item
+                            .file
+                                .file__text
+                                    .file__name
+                                        span Арбат. Ю. А. Зелёные кони
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 704 KB, pdf
+                        .files__item
+                            .file
+                                .file__text
+                                    a(href='#').file__name
+                                        span Ермакова У. Истоки мезенской росписи и ее связь с другими видами северной росписи
+                        .files__item
+                            .file
+                                .file__text
+                                    .file__name
+                                        span Народное искусство. Исследования и материалы: сборник статей
+                                    .file__bottom
+                                        .file__download
+                                            a(href='#') Скачать
+                                        .file__meta
+                                            span &mdash; 11,9 MB, pdf
+        .node-page__share.share
+            .share__text
+                span Поделитесь заметкой с друзьями в соцсетях
+            .share__list
+                .share__item
+                    a(href='#')
+                        img(src='static/img/general/fb-brown.png' alt='FB')
+                .share__item
+                    a(href='#')
+                        img(src='static/img/general/vk-brown.png' alt='VK')
+                .share__item
+                    a(href='#')
+                        img(src='static/img/general/twitter-brown.png' alt='Twitter')
+        .node-page__navigation.navigation
+            .navigation__prev
+                .navigation__btn
+                    a(href='#').button.button_icon #[i.prev] Предыдущая заметка
+                .navigation__title
+                    a(href='#') Поморы: статья из альманаха
+                .navigation__descr
+                    span У поморов славная история. Из поморов вышли такие знаменитые люди, как ученый Михаил Ломоносов, скульптор Федор Шубин, священник Иоанн Кронштадтский, а также такие землепроходцы, как Ермак Тимофеевич...
+            .navigation__next
+                .navigation__btn
+                    a(href='#').button.button_icon Следующая заметка #[i.next]
+                .navigation__title
+                    a(href='#') Лица России - этносы и народы
+                .navigation__descr
+                    span Несмотря на активные процессы ассимиляции поморов в великорусском этносе (этноним «великороссы» возник в XIX веке), поморы сохранили свое этническое (национальное) самосознание до наших дней...
+

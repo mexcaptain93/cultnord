@@ -1,0 +1,219 @@
+.calendar-page
+
+  .months
+
+    &__list
+      display: flex
+      justify-content: center
+
+      @media $tablet_small
+        flex-wrap: wrap
+
+
+    &__item
+      border-bottom: 1px solid $brown_light
+      padding: 6px 15px
+
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0
+      color: $brown
+
+      @media $tablet
+        padding: 6px 10px
+
+      &:first-child
+        padding-left: 8px
+
+        @media $tablet_small
+          padding-left: 10px
+
+      &:last-child
+        padding-right: 8px
+
+        @media $tablet_small
+          padding-right: 10px
+
+      a
+        text-decoration: none
+
+  &__place
+    margin-bottom: 38px
+
+    @media $phone
+      text-align: center
+
+    .select2
+      width: 160px!important
+      padding-left: 6px
+
+
+    .select2-selection__rendered
+      padding-left: 0!important
+      padding-right: 0!important
+      width: 115px
+      border-bottom: 1px dotted $gray
+
+      font-size: 14px
+      line-height: 22px
+      text-transform: none
+      text-align: left
+
+    .select2 .select2-selection
+      border: none!important
+      width: auto
+      padding-left: 0
+      padding-right: 0
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b
+      width: 10px
+      background-image: url('../img/general/dropdown-bold.png')
+
+
+  &__list
+    margin-bottom: 160px
+
+
+  .festival
+    display: flex
+    padding-bottom: 32px
+    margin-bottom: 51px
+    border-bottom: 1px solid $brown_light
+
+    @media $phone
+      flex-direction: column
+      align-items: center
+
+    &_opened
+
+      .festival
+
+        &__descr
+          max-height: none;
+          max-width: none;
+
+        &__more
+
+          a
+
+            &::before
+              content: 'свернуть описание'
+
+            &::after
+              transform: rotate(0deg)
+
+    &:last-child
+      margin-bottom: 0
+
+    &__photo
+      flex-shrink: 0
+      margin-right: 33px
+
+      @media $phone
+        margin-bottom: 40px
+
+      img
+        max-width: 175
+
+    &__text
+      flex-grow: 1
+
+    &__name
+      @extend .like-h1
+
+      margin-bottom: 9px
+      margin-top: -8px
+
+      text-transform: none
+      text-align: left
+      letter-spacing: 0
+
+      @media $phone
+        text-align: center
+
+      a
+        text-decoration: none
+
+    &__place-tag
+      margin-bottom: -1px
+
+      @media $phone
+        text-align: center
+
+      a
+        text-decoration: none
+
+    &__place
+      display: inline-block
+      margin-right: 14px
+
+      font-size: 14px
+      line-height: 18px
+      letter-spacing: 1.4px
+      color: $blue
+      text-transform: uppercase
+      font-weight: bold
+
+      @media $phone
+        display: block
+
+    &__tag
+      display: inline-block
+      font-size: 12px
+      line-height: 22px
+      letter-spacing: 1.2px
+      text-transform: uppercase
+      color: $brown_light
+      font-weight: bold
+
+      @media $phone
+        display: block
+
+    &__dates
+      margin-bottom: 1px
+
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1.2px
+      color: $blue
+      text-transform: uppercase
+      font-weight: bold
+
+      @media $phone
+        text-align: center
+
+    &__descr
+      max-width: 540px
+      max-height: 90px
+      overflow: hidden
+
+      p
+        margin-bottom: 0
+
+    &__more
+      padding-right: 17px
+      margin-top: 14px
+
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 0
+      text-align: right
+      color: $blue2
+
+      a
+        text-decoration: none
+        border-bottom: 1px dotted $blue
+
+        &::before
+          content: 'показать описание'
+        
+        &::after
+          content: ''
+          transform: rotate(180deg)
+          margin-left: 5px
+          background-image: url('../img/general/dropdown-blue.png')
+          width: 11px
+          height: 7px
+          display: inline-block
+
+

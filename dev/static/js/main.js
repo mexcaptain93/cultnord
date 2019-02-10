@@ -5,6 +5,7 @@ $(function () {
     headerSearch();
     headerDropdown();
     selects();
+    calendarShowMore();
 });
 
 $(window).resize(function () {
@@ -185,6 +186,15 @@ function headerDropdown() {
 
 function selects() {
     if($().select2) {
-        $('.select').select2();
+        $('.select').select2({ dropdownAutoWidth: true });
     }
+}
+
+function calendarShowMore() {
+    var btn = $('.js-calendar-showmore-btn');
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $(this).parents('.festival').toggleClass('festival_opened');
+    });
 }

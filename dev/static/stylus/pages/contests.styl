@@ -1,0 +1,93 @@
+.contests-page
+
+  &__heading
+    position: relative
+
+    @media $tablet_small
+      margin-bottom: 40px
+
+    .like-h1
+
+      @media $tablet_small
+        margin-bottom: 20px
+
+  &__top-btn
+    position: absolute
+    top: -8px
+    right: 16px
+
+    @media $tablet_small
+      position: static
+      text-align: center
+
+    .button
+      width: 224px
+
+  &__list
+    margin-bottom: 47px
+
+  .contest
+    display: flex
+    border-bottom: 1px solid $brown_light
+    padding-bottom: 67px
+    margin-bottom: 63px
+
+    &_wide
+      position: relative
+
+      .contest
+
+        &__right
+          position: absolute
+          top: 0
+          right: 0
+
+
+    &:last-child
+      margin-bottom: 0
+
+    &__right
+      min-width: 224px
+      margin-left: 30px
+      padding-top: 5px
+      flex-shrink: 0
+
+    &__title
+      margin-bottom: 17px
+
+      font-family: 'Playfair'
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0
+      color: $brown
+      
+      a
+        text-decoration: none
+
+    &__text
+
+      p
+
+        &:last-child
+          margin-bottom: 0
+
+    &__date
+      margin-bottom: 25px
+
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 1.6px
+      color: $blue2
+      text-transform: uppercase
+      font-weight: bold
+
+
+    .file
+      margin-bottom: 30px
+
+      &:last-child
+        margin-bottom: 0
+
+
+  .pagination
+    margin-bottom: 97px

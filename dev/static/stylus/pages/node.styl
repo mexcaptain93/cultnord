@@ -63,6 +63,9 @@
     padding-top: 20px
     margin-bottom: 53px
 
+    @media $phone
+      flex-direction: column
+
     &__text
       padding-right: 20px
 
@@ -72,10 +75,17 @@
       letter-spacing: 0
       color: $gray
 
+      @media $phone
+        padding-right: 0
+        margin-bottom: 20px
+
 
     &__list
       display: flex
       margin-top: -5px
+
+      @media $phone
+        justify-content: center
 
     &__item
       margin-right: 20px

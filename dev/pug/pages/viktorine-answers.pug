@@ -38,9 +38,11 @@ block content
                                 .radio__item
                                     input(type='radio' id='viktorine-1-2' name='viktorine-1' value='2 августа Ильин день')
                                     label(for='viktorine-1-2') 2 августа Ильин день
-                                .radio__item
-                                    input(type='radio' id='viktorine-1-3' name='viktorine-1' value='14 декабря Наумов день')
+                                .radio__item.right
+                                    input(type='radio' id='viktorine-1-3' name='viktorine-1' checked value='14 декабря Наумов день')
                                     label(for='viktorine-1-3') 14 декабря Наумов день
+                        .question__answer
+                            span 14 декабря - День Наума Грамотника (Наумов день). В этот день начинался учебный год, пятилетнему ребенку родители впервые давали азбуку.
                 .viktorine-page__item.question
                     .question__num
                         span 2
@@ -52,11 +54,11 @@ block content
                                 .radio__item
                                     input(type='radio' id='viktorine-2-1' name='viktorine-2' value='«жонка»')
                                     label(for='viktorine-2-1') «жонка»
-                                .radio__item
+                                .radio__item.right
                                     input(type='radio' id='viktorine-2-2' name='viktorine-2' value='«большуха»')
                                     label(for='viktorine-2-2') «большуха»
-                                .radio__item
-                                    input(type='radio' id='viktorine-2-3' name='viktorine-2' value='«сама»')
+                                .radio__item.error
+                                    input(type='radio' id='viktorine-2-3' name='viktorine-2' checked value='«сама»')
                                     label(for='viktorine-2-3') «сама»
                 .viktorine-page__item.question
                     .question__num
@@ -72,8 +74,8 @@ block content
                                 .radio__item
                                     input(type='radio' id='viktorine-3-2' name='viktorine-3' value='полати')
                                     label(for='viktorine-3-2') полати
-                                .radio__item
-                                    input(type='radio' id='viktorine-3-3' name='viktorine-3' value='место, где помещались образа')
+                                .radio__item.right
+                                    input(type='radio' id='viktorine-3-3' name='viktorine-3' checked= value='место, где помещались образа')
                                     label(for='viktorine-3-3') место, где помещались образа
                 .viktorine-page__item.question
                     .question__num
@@ -82,27 +84,22 @@ block content
                         .question__text
                             span Расположите деревянные кресты в соответствии с их названием
                         .question__variants
-                            .drag-img.js-drag-img
-                                .drag-img__images.images
-                                    .images__list
-                                        .images__item
-                                            img(src='static/img/content/viktorine-1.jpg' alt='Вариант 1')
-                                        .images__item
-                                            img(src='static/img/content/viktorine-2.jpg' alt='Вариант 2')
-                                        .images__item
-                                            img(src='static/img/content/viktorine-3.jpg' alt='Вариант 3')
+                            .drag-img
                                 .drag-img__boxes.boxes
                                     .boxes__list
-                                        .boxes__item
+                                        .boxes__item.right
                                             .boxes__container
+                                                img(src='static/img/content/viktorine-1.jpg' alt='Вариант 1')
                                             .boxes__text
                                                 span обетный крест
-                                        .boxes__item
+                                        .boxes__item.error
                                             .boxes__container
+                                                img(src='static/img/content/viktorine-3.jpg' alt='Вариант 1')
                                             .boxes__text
                                                 span навигационный крест
-                                        .boxes__item
+                                        .boxes__item.error
                                             .boxes__container
+                                                img(src='static/img/content/viktorine-2.jpg' alt='Вариант 1')
                                             .boxes__text
                                                 span столбец глобец
                 .viktorine-page__item.question
@@ -112,26 +109,22 @@ block content
                         .question__text
                             span Термины из поморской педагогики, расставьте их в правильном порядке
                         .question__variants
-                            .drag-text.js-drag-text
-                                .drag-text__list
-                                    .drag-text__item
-                                        span «законить»
-                                    .drag-text__item
-                                        span «натакать»
-                                    .drag-text__item
-                                        span «натруска»
+                            .drag-text
                                 .drag-text__boxes.boxes
                                     .boxes__list
-                                        .boxes__item
+                                        .boxes__item.right
                                             .boxes__container
+                                                span «натакать»
                                             .boxes__text
                                                 span наказать
-                                        .boxes__item
+                                        .boxes__item.error
                                             .boxes__container
+                                                span «натруска»
                                             .boxes__text
                                                 span советовать
-                                        .boxes__item
+                                        .boxes__item.error
                                             .boxes__container
+                                                span «законить»
                                             .boxes__text
                                                 span учить добру
                 .viktorine-page__item.question
@@ -141,36 +134,81 @@ block content
                         .question__text
                             span Берега Белого моря принято разделять на Зимний берег Белого моря и Летний берег. К какому берегу относятся населённые пункты:
                         .question__variants
-                            .drag-text-groups.js-drag-text-groups
-                                .drag-text-groups__list
-                                    .drag-text-groups__item
-                                        span Патракеевка
-                                    .drag-text-groups__item
-                                        span Пертоминск
-                                    .drag-text-groups__item
-                                        span Луда
-                                    .drag-text-groups__item
-                                        span Койда
-                                    .drag-text-groups__item
-                                        span Мезень
-                                    .drag-text-groups__item
-                                        span Яреньга
-                                    .drag-text-groups__item
-                                        span Лопшеньга
-                                    .drag-text-groups__item
-                                        span Нижняя Золотица
+                            .drag-text-groups.drag-text-groups_answers
                                 .drag-text-groups__boxes.boxes
                                     .boxes__list
                                         .boxes__item
                                             .boxes__container
+                                                .drag-text-groups__item.right
+                                                    span Патракеевка
+                                                .drag-text-groups__item.right
+                                                    span Пертоминск
+                                                .drag-text-groups__item.right
+                                                    span Луда
+                                                .drag-text-groups__item.error
+                                                    span Койда
+                                                .drag-text-groups__item.error
+                                                    span Мезень
+                                                .drag-text-groups__item.right
+                                                    span Яреньга
                                             .boxes__text
                                                 span Зимний Берег
                                         .boxes__item
                                             .boxes__container
+                                                .drag-text-groups__item.error
+                                                    span Лопшеньга
+                                                .drag-text-groups__item.right
+                                                    span Нижняя Золотица
                                             .boxes__text
                                                 span Летний Берег
+    .viktorine-page__result.container.container_small
+        .result
+            .result__wrap
+                .result__img
+                    img(src='static/img/content/viktorina.jpg' alt='Викторина')
+                .result__content
+                    .result__title
+                        span Ваш результат
+                    .result__text
+                        span 3 верных ответа из 6. Не так плохо как могло бы быть. #[br] Чтобы вы подтянули свои знания о быте поморов мы подготовили #[br] #[a(href='#') статьи в соответствующем разделе].
+                    .result__share.share
+                        .share__text
+                            span Поделитесь результатом с друзьями в соцсетях
+                        .share__list
+                            .share__item
+                                a(href='#')
+                                    img(src='static/img/general/fb-brown.png' alt='FB')
+                            .share__item
+                                a(href='#')
+                                    img(src='static/img/general/vk-brown.png' alt='VK')
+                            .share__item
+                                a(href='#')
+                                    img(src='static/img/general/twitter-brown.png' alt='Twitter')
+                .result__num
+                    span 3/6
+    .viktorine-page__others.others.container.container_small
+        .others__list
+            .others__item
+                .others__image
+                    img(src='static/img/content/viktorine-other-1.jpg' alt='Северные народные сказания и сказки')
+                .others__title
+                    a(href='#') Северные народные #[br] сказания и сказки
+                .others__btn
+                    a(href='#').button Перейти к вопросам
+            .others__item
+                .others__image
+                    img(src='static/img/content/viktorine-other-1.jpg' alt='Деревянное зодчество Архангельского Севера')
+                .others__title
+                    a(href='#') Деревянное зодчество Архангельского Севера
+                .others__btn
+                    a(href='#').button Перейти к вопросам
+            .others__item
+                .others__image
+                    img(src='static/img/content/viktorine-other-1.jpg' alt='Северные народные сказания и сказки')
+                .others__title
+                    a(href='#') Северные народные #[br] сказания и сказки
+                .others__btn
+                    a(href='#').button Перейти к вопросам
 
 
-            .viktorine-page__btn
-                a(href='#').button.button_serif-big Проверить ответы
 

@@ -20,7 +20,6 @@
     @media $phone
       flex-direction: column
 
-
     &__num
       padding: 0 73px 0 11px
       font-family: 'Playfair'
@@ -54,7 +53,31 @@
         @media $tablet
           display: none
 
+    &__answer
+      margin-top: 22px
+      margin-bottom: -3px
+
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 0
+      color: $gray
+      font-style: italic
+
     .radio
+
+      &__item
+
+        &.right
+          color: $blue2
+
+          label
+            color: $blue2
+
+        &.error
+          color: $orange!important
+
+          label
+            color: $orange!important
 
       input
         display: none
@@ -129,7 +152,6 @@
             cursor: pointer
             border-radius: 10px
 
-
       .boxes
 
         &__list
@@ -146,6 +168,28 @@
           &:last-child
             margin-right: 0
 
+          &.right
+
+            .boxes
+
+              &__container
+                border-width: 2px
+                border-color: $blue2
+
+              &__text
+                color: $blue2
+
+          &.error
+
+            .boxes
+
+              &__container
+                border-width: 2px
+                border-color: $orange
+
+              &__text
+                color: $orange
+
         &__container
           margin-bottom: 13px
           width: 176px
@@ -156,7 +200,10 @@
 
           @media $tablet
             width: 100%
+            height: auto
 
+          img
+            border-radius: 10px
 
         &__text
           padding: 0 15px
@@ -203,8 +250,6 @@
       &:last-child
         margin-right: 0
 
-
-
     .boxes
 
       &__list
@@ -222,6 +267,38 @@
         &:last-child
           margin-right: 0
 
+        &.right
+
+          .boxes
+
+            &__container
+              border-width: 2px
+              border-color: $blue2
+              background-color: $white
+
+              span
+                color: $blue2
+                width: 100%
+                display: block
+                line-height: 36px
+                text-align: center
+
+        &.error
+
+          .boxes
+
+            &__container
+              border-width: 2px
+              background-color: $white
+              border-color: $orange
+
+              span
+                color: $orange
+                width: 100%
+                display: block
+                line-height: 36px
+                text-align: center
+
       &__container
         margin-bottom: 13px
         width: 100%
@@ -238,14 +315,12 @@
         color: $gray
         text-align: center
 
-
   .drag-text-groups
 
     &__list
       display: flex
       flex-wrap: wrap
       justify-content: center
-
 
     &__item
       width: 175px
@@ -263,7 +338,6 @@
         margin-left: 7px
         margin-right: 7px
 
-
       span
         width: 100%
         display: block
@@ -280,8 +354,6 @@
           margin-left: 7px
           margin-right: 7px
 
-
-
     .boxes
 
       &__list
@@ -290,7 +362,6 @@
 
       &__item
         width: calc(50% - 7px)
-
 
       &__container
         margin-bottom: 13px
@@ -306,4 +377,230 @@
         letter-spacing: 0
         color: $gray
         text-align: center
+
+    &_answers
+
+      .right
+        border-width: 2px
+        border-color: $blue2
+        background-color: $white
+
+        span
+          color: $blue2
+          width: 100%
+          display: block
+          line-height: 36px
+          text-align: center
+
+      .error
+        border-width: 2px
+        border-color: $orange
+        background-color: $white
+
+        span
+
+          color: $orange
+          width: 100%
+          display: block
+          line-height: 36px
+          text-align: center
+
+      .drag-text-groups
+
+        &__item
+          margin: 4px 3px
+
+          @media $phone
+            max-width: 96%
+
+      .boxes
+
+        &__item
+          display: flex
+          flex-direction: column
+
+        &__container
+          flex-grow: 1
+          height: auto
+
+          .drag-text-groups__item
+            display: inline-block
+            margin: 4px 0 4px 3px
+
+  .result
+    margin-bottom: 90px
+
+    &__wrap
+      display: flex
+      position: relative
+      padding-top: 17px
+      padding-bottom: 28px
+      border: 1px solid $brown_light
+      box-shadow: 0 6px 9px 0 rgba(0, 126, 136, 0.3)
+
+      @media $tablet_small
+        flex-direction: column
+        align-items: center
+
+    &__content
+
+      @media $tablet_small
+        text-align: center
+
+    &__img
+      flex-shrink: 0
+      position: relative
+      left: -48px
+      top: 7px
+
+      @media $tablet_small
+        left: 0
+
+      @media $phone
+        order: -2
+
+    &__text
+      margin-bottom: 35px
+      padding-left: 18px
+
+      line-height: 24px
+
+      @media $tablet_small
+        text-align: center
+
+      @media $phone
+        padding-right: 18px
+
+      br
+
+        @media $phone
+          display: none
+
+    &__title
+      display: inline-block
+      padding: 21px 23px 0 17px
+      position: relative
+      margin-bottom: 27px
+
+      color: $gray
+      font-size: 30px
+      line-height: 30px
+      letter-spacing: 0
+      font-family: 'Playfair'
+
+      @media $tablet_small
+        margin-left: auto
+        margin-right: auto
+
+      @media $phone
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 0
+
+      span
+        position: relative
+        z-index: 1
+
+      &::after
+        content: ''
+        height: 9px
+        background-color: #f4ede2
+        position: absolute
+        bottom: -3px
+        left: 0
+        right: 0
+        display: block
+        z-index: 0
+
+    &__num
+      position: absolute
+      top: 10px
+      right: 30px
+
+      font-family: 'Playfair'
+      color: $blue2
+      font-size: 60px
+      letter-spacing: 0
+
+      @media $tablet_small
+        font-size: 30px
+
+      @media $phone
+        position: static
+        order: -1
+        margin-bottom: 20px
+
+        text-align: center
+        font-size: 60px
+
+
+    .share
+      @extend .node-page .share
+
+      margin-left: 18px
+      margin-right: -90px
+      margin-bottom: 0
+
+      @media $tablet
+        margin-right: 20px
+
+
+  .others
+    margin-bottom: 130px
+
+    @media $tablet_small
+      margin-bottom: 60px
+
+    &__list
+      display: flex
+
+      @media $tablet_small
+        flex-direction: column
+
+    &__item
+      width: 33.3%
+
+      @media $tablet_small
+        width: 100%
+        margin-bottom: 60px
+
+      &:last-child
+
+        @media $tablet_small
+          margin-bottom: 0
+
+    &__image
+      margin-bottom: 27px
+
+      text-align: center
+
+      img
+        width: 215px
+        height: 215px
+        object-fit: cover
+        object-position center
+        border-radius: 50%
+        box-shadow: 0 6px 9px 0 rgba(43, 113, 118, 0.3);
+
+    &__title
+      margin-bottom: 18px
+
+      font-family: 'Playfair'
+      font-size: 20px
+      line-height: 28px
+      letter-spacing: 0
+      color: $brown
+      text-align: center
+
+      a
+        text-decoration: none
+
+    &__btn
+      text-align: center
+
+      .button
+        padding: 9px 19px 8px
+        font-family: 'Playfair'
+        font-weight: bold
+        font-size: 12px
 

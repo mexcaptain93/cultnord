@@ -201,16 +201,16 @@ function calendarShowMore() {
 }
 
 function dragndrop() {
-    $( ".drag-img .images__item img" ).draggable();
-    $( ".drag-img .boxes__container" ).droppable({
+    $( ".js-drag-img .images__item img" ).draggable();
+    $( ".js-drag-img .boxes__container" ).droppable({
 
     });
-    $( ".drag-text .drag-text__item span" ).draggable();
-    $( ".drag-text .boxes__container" ).droppable({
+    $( ".js-drag-text .drag-text__item span" ).draggable();
+    $( ".js-drag-text .boxes__container" ).droppable({
 
     });
-    $( ".drag-text-groups .drag-text-groups__item span" ).draggable();
-    $( ".drag-text-groups .boxes__container" ).droppable({
+    $( ".js-drag-text-groups .drag-text-groups__item span" ).draggable();
+    $( ".js-drag-text-groups .boxes__container" ).droppable({
 
     });
 }

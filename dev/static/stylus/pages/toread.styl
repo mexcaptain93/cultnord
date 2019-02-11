@@ -1,0 +1,92 @@
+.toread-page
+
+  .container_small
+    max-width: 812px
+
+  .tags
+    margin-bottom: 67px
+
+    &__list
+      display: flex
+      justify-content: space-between
+
+      @media $tablet_small
+        flex-direction: column
+        align-items: center
+
+    &__item
+      min-width: 224px
+      padding: 0 5px
+
+      @media $tablet_small
+        min-width: none
+        padding: 0
+        margin-bottom: 20px
+
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+      .button
+        width: 100%
+
+
+  &__list
+    margin-bottom: 47px
+
+  .book
+    display: flex
+    padding-bottom: 60px
+    margin-bottom: 60px
+    margin-right: -70px
+    border-bottom: 1px solid $brown_light
+
+    @media $phone
+      flex-direction: column
+      align-items: center
+
+    &:last-child
+      margin-bottom: 0
+
+    &__photo
+      flex-shrink: 0
+      margin-right: 33px
+
+      @media $phone
+        margin-bottom: 40px
+
+      img
+        max-width: 175px
+
+    &__text
+      flex-grow: 1
+
+    &__name
+      @extend .like-h1
+
+      margin-bottom: 14px
+      margin-top: -8px
+
+      text-transform: none
+      text-align: left
+      letter-spacing: 0
+      font-weight: normal
+      line-height: 34px
+
+      @media $phone
+        text-align: center
+
+      a
+        text-decoration: none
+
+
+    &__descr
+
+      p
+        margin-bottom: 0
+
+  .pagination
+    margin-bottom: 97px

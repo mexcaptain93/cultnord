@@ -1,0 +1,81 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Надо почитать'
+    - var pageClass = 'toread-page'
+
+block content
+    .breadcrumbs
+        .container.container_small
+            .breadcrumbs__list
+                span.breadcrumbs__item
+                    a(href='/')
+                        img(src='static/img/general/home.png' alt='Главная')
+                span.breadcrumbs__item
+                    a(href='#') Надо почитать
+    .container.container_small
+        h1.like-h1 Надо почитать
+    .toread-page__tags.tags.container.container_small
+        .tags__list
+            .tags__item
+                a(href='#').button Из истории
+            .tags__item
+                a(href='#').button Из новых поступлений
+            .tags__item
+                a(href='#').button Раритет
+    .toread-page__list.container.container_small
+        .toread-page__item.book
+            .book__photo
+                a(href='#')
+                    img(src='static/img/content/toread-1.jpg' alt='Русская народная культура Поморья в ХIX-начале XX века')
+            .book__text
+                .book__name
+                    a(href='#') Русская народная культура Поморья в ХIX- #[br] начале XX века
+                .book__descr
+                    p Монография является продолжением книги "Поморы. Формирование группы и система хозяйства". Основное внимание уделяется традиционной культуре поморов в широком смысле слова, которая дается в сопоставлении с общерусскими и севернорусскими традициями.
+        .toread-page__item.book
+            .book__photo
+                a(href='#')
+                    img(src='static/img/content/toread-2.jpg' alt='Рождество на Поморье: Традиции старины')
+            .book__text
+                .book__name
+                    a(href='#') Рождество на Поморье: Традиции старины
+                .book__descr
+                    p Орнамент северной народной вышивки разнообразен. Северянки в своих изделиях вышивали традиционные орнаментальные мотивы, используя изображения солнца, птиц, зверей, растительные мотивы, геометрические фигуры, сюжеты.
+        .toread-page__item.book
+            .book__photo
+                a(href='#')
+                    img(src='static/img/content/toread-3.jpg' alt='История Маргаритинской ярмарки в городе Архангельске')
+            .book__text
+                .book__name
+                    a(href='#') История Маргаритинской ярмарки в городе Архангельске
+                .book__descr
+                    p Архангельский историк Иван Мосеев в своём исследовании о Маргаритинской ярмарке пишет: «До сих пор историкам неизвестна причина, по которой ярмарка стала называться по имени Святой Маргариты. Известно лишь, что в 1844 году с согласия архангелогородского военного губернатора ярмарка получила название Маргаритинской якобы в честь Святой Маргариты (по другой версии, Маргаритой звали жену военного губернатора)».
+        .toread-page__item.book
+            .book__photo
+                a(href='#')
+                    img(src='static/img/content/toread-4.jpg' alt='Фольклор Архангельского края')
+            .book__text
+                .book__name
+                    a(href='#') Фольклор Архангельского края
+                .book__descr
+                    p Птица - этот знак вбирал в себя множество значений, непременно доброго содержания. Две птицы, изображённые на концах свадебного полотенца сулили согласие между будущими супругами. Символ птицы соотносился и с женским началом - с образом матери, охраняющей своих птенцов, обустраивающей гнездо, трудолюбивой хозяйки. Изображение птицы вышивали отдельно крупным планом, либо оно входило в состав сложной композиции. В вышивке Каргополья встречается изображение птицы - павы, которая всегда изображалась в профиль, поднятым крылом и огромным хвостом, и являлась символом счастья и любви.
+
+    .pagination.js-pagination-noline
+        ul.pagination__list
+            li.pagination__item
+                a(href='#') 1
+            li.pagination__item
+                a(href='#') 2
+            li.pagination__item
+                a(href='#') 3
+            li.pagination__item
+                a(href='#') 4
+            li.pagination__item
+                a(href='#') 5
+            li.pagination__item
+                a(href='#') 6
+            li.pagination__item
+                a(href='#') 7
+
+

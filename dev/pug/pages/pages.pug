@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Список всех страниц'
+
+block content
+    .breadcrumbs
+        .container.container_small
+            .breadcrumbs__list
+                span.breadcrumbs__item
+                    a(href='/')
+                        img(src='static/img/general/home.png' alt='Главная')
+                span.breadcrumbs__item
+                    span Список всех страниц
+    .container.container_small
+        h1.like-h1 Резьба и роспись по дереву
+
+    .container.container_small
+        a(href='articles.html') Статьи
+        br
+        a(href='calendar.html') Календарь
+        br
+
+        a(href='category.html') Категория
+        br
+        a(href='contests.html') Конкурсы
+        br
+
+        a(href='event.html') Мероприятие
+        br
+        a(href='index.html') Главная
+        br
+
+        a(href='list-1.html') Список 1
+        br
+        a(href='list-2.html') Список 2
+        br
+
+        a(href='material.html') Материал
+        br
+        a(href='node.html') Заметка
+        br
+
+        a(href='person.html') Персона
+        br
+        a(href='toread.pug') Надо почитать

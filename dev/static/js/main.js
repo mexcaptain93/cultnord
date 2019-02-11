@@ -6,6 +6,7 @@ $(function () {
     headerDropdown();
     selects();
     calendarShowMore();
+    dragndrop()
 });
 
 $(window).resize(function () {
@@ -196,5 +197,20 @@ function calendarShowMore() {
     btn.on('click', function (e) {
         e.preventDefault();
         $(this).parents('.festival').toggleClass('festival_opened');
+    });
+}
+
+function dragndrop() {
+    $( ".drag-img .images__item img" ).draggable();
+    $( ".drag-img .boxes__container" ).droppable({
+
+    });
+    $( ".drag-text .drag-text__item span" ).draggable();
+    $( ".drag-text .boxes__container" ).droppable({
+
+    });
+    $( ".drag-text-groups .drag-text-groups__item span" ).draggable();
+    $( ".drag-text-groups .boxes__container" ).droppable({
+
     });
 }

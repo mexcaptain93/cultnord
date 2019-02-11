@@ -1,0 +1,309 @@
+.viktorine-page
+
+  &__list
+    margin-bottom: 57px
+
+  &__btn
+    margin-bottom: 120px
+
+    text-align: right
+
+    @media $phone
+      text-align: center
+
+  .question
+    display: flex
+    border-bottom: 1px solid $brown_light
+    padding-bottom: 50px
+    margin-bottom: 40px
+
+    @media $phone
+      flex-direction: column
+
+
+    &__num
+      padding: 0 73px 0 11px
+      font-family: 'Playfair'
+      color: $blue2
+      font-size: 36px
+      line-height: 36px
+      letter-spacing: 0
+
+      @media $tablet_small
+        padding-right: 20px
+
+      @media $phone
+        padding-right: 0
+        margin-bottom: 20px
+        text-align: center
+
+    &__content
+      padding-top: 5px
+
+    &__text
+      margin-bottom: 20px
+
+      font-family: 'Playfair'
+      font-size: 20px
+      line-height: 28px
+      letter-spacing: 0
+      color: $brown
+
+      br
+
+        @media $tablet
+          display: none
+
+    .radio
+
+      input
+        display: none
+
+        &:checked
+
+          & + label
+            color: $blue2
+
+            &::after
+              content: ''
+              position: absolute
+              top: 14px
+              left: 3px
+              width: 11px
+              height: 11px
+              background-color: $brown_light
+              border-radius: 50%
+
+        & + label
+          position: relative
+          display: block
+          padding-left: 40px
+          cursor: pointer
+
+          font-size: 18px
+          line-height: 40px
+          letter-spacing: 0
+          color: $gray
+
+          &:hover
+            color: $blue2
+
+          &::before
+            content: ''
+            position: absolute
+            top: 11px
+            left: 0
+            width: 17px
+            height: 17px
+            background-color: $blue_light
+            border-radius: 50%
+            border: 1px solid $brown_light
+
+    .drag-img
+
+      .images
+        margin-bottom: 28px
+
+        &__list
+          display: flex
+
+        &__item
+          width: 176px
+          height: 189px
+          margin-right: 65px
+          border-radius: 10px
+          border: 1px solid #e3e6e9
+
+          @media $tablet
+            width: 33.3%
+            margin-right: 20px
+
+          &:last-child
+            margin-right: 0
+
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+            cursor: pointer
+            border-radius: 10px
+
+
+      .boxes
+
+        &__list
+          display: flex
+
+        &__item
+          width: 176px
+          margin-right: 65px
+
+          @media $tablet
+            width: calc(33.3% - 13px)
+            margin-right: 20px
+
+          &:last-child
+            margin-right: 0
+
+        &__container
+          margin-bottom: 13px
+          width: 176px
+          height: 189px
+          background-color: $blue_light
+          border: 1px solid #e3e6e9
+          border-radius: 10px
+
+          @media $tablet
+            width: 100%
+
+
+        &__text
+          padding: 0 15px
+          font-size: 16px
+          line-height: 20px
+          letter-spacing: 0
+          color: $gray
+          text-align: center
+
+          @media $tablet
+            padding: 0
+
+  .drag-text
+
+    &__list
+      display: flex
+      justify-content: space-between
+      margin-bottom: 28px
+
+    &__item
+      width: 176px
+      height: 42px
+      margin-right: 65px
+      border-radius: 10px
+      border: 1px solid #e3e6e9
+
+      font-size: 16px
+      line-height: 40px
+      text-align: center
+
+      @media $tablet
+        width: 28%
+        margin-right: 0
+
+      span
+        width: 100%
+        display: block
+        cursor: pointer
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+      &:last-child
+        margin-right: 0
+
+
+
+    .boxes
+
+      &__list
+        display: flex
+        justify-content: space-between
+
+      &__item
+        width: 176px
+        margin-right: 65px
+
+        @media $tablet
+          width: 28%
+          margin-right: 0
+
+        &:last-child
+          margin-right: 0
+
+      &__container
+        margin-bottom: 13px
+        width: 100%
+        height: 42px
+        background-color: $blue_light
+        border: 1px solid #e3e6e9
+        border-radius: 10px
+
+      &__text
+        padding: 0 15px
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0
+        color: $gray
+        text-align: center
+
+
+  .drag-text-groups
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+
+    &__item
+      width: 175px
+      height: 42px
+      border-radius: 10px
+      border: 1px solid #e3e6e9
+      margin-right: 15px
+      margin-bottom: 26px
+
+      font-size: 16px
+      line-height: 40px
+      text-align: center
+
+      @media $tablet
+        margin-left: 7px
+        margin-right: 7px
+
+
+      span
+        width: 100%
+        display: block
+        cursor: pointer
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+      &:nth-child(4n)
+        margin-right: 0
+
+        @media $tablet
+          margin-left: 7px
+          margin-right: 7px
+
+
+
+    .boxes
+
+      &__list
+        display: flex
+        justify-content: space-between
+
+      &__item
+        width: calc(50% - 7px)
+
+
+      &__container
+        margin-bottom: 13px
+        height: 135px
+        background-color: $blue_light
+        border: 1px solid #e3e6e9
+        border-radius: 10px
+
+      &__text
+        padding: 0 15px
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0
+        color: $gray
+        text-align: center
+

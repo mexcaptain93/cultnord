@@ -221,6 +221,14 @@
         letter-spacing: 1.8px
         text-decoration: none
 
+        &:hover
+          color: $blue
+
+      &__submenu
+        display: none
+
+        font-size: 12px
+
       &__link
         width: 50%
         margin-bottom: 14px
@@ -229,6 +237,7 @@
         color: $white
 
         a
+          display: block
           text-decoration: none
 
       &__links
@@ -243,6 +252,11 @@
             width: auto
             position: relative
 
+            &_opened
+
+              &::after
+                transform: rotate(180deg);
+
             &::after
               content: ''
               display: block
@@ -252,6 +266,7 @@
               position: absolute
               top: 6px
               right: 0
+              transition: .3s transform ease
 
 
 

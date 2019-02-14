@@ -1,6 +1,7 @@
 .stories-page
 
   .main
+    margin-bottom: 60px
 
     &__wrap
       position: relative
@@ -10,4 +11,95 @@
       left: 0
       right: 0
       bottom: 0
-      background-color: alpha($gray, 0.7)
+      background-color: alpha($gray_dark, 0.89)
+      display: flex
+      padding-bottom: 5px
+      padding-top: 21px
+
+      @media $tablet_small
+        position: static
+        background-color: $gray_dark
+        flex-direction: column
+
+    &__left
+      width: 50%
+      flex-shrink: 0
+      padding-left: 49px
+
+      @media $tablet
+        padding-left: 20px
+
+      @media $tablet_small
+        width: 100%
+        padding-right: 20px
+
+    &__right
+      width: 50%
+      flex-shrink: 0
+      padding-top: 6px
+
+      @media $tablet
+        padding-right: 20px
+
+      @media $tablet_small
+        width: 100%
+        padding-left: 20px
+
+    &__title
+      margin-bottom: 2px
+
+      font-family: 'Playfair'
+      font-weight: bold
+      font-size: 20px
+      line-height: 28px
+      letter-spacing: 0
+      color: $brown_light
+
+    &__meta
+      display: flex
+
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 36px
+      letter-spacing: 0
+      color: $brown_light
+
+    &__date
+      margin-right: 46px
+
+      &::before
+        display: inline-block
+        margin-right: 6px
+        content: ''
+        width: 14px
+        height: 11px
+        background-image: url('../img/general/stories-date.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
+    &__photo
+
+      &::before
+        display: inline-block
+        margin-right: 6px
+        content: ''
+        width: 14px
+        height: 10px
+        background-image: url('../img/general/stories-photo.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
+    &__descr
+      margin-left: -11px
+      padding-right: 100px
+
+      font-size: 14px
+      line-height: 18px
+      letter-spacing: 0
+      color: $brown_light
+
+      @media $tablet
+        margin-left: 0
+        padding-right: 0

@@ -4,6 +4,10 @@ block variables
     - var title = 'Истории в картинках'
     - var pageClass = 'stories-page'
 
+block script
+    script(src='static/js/simplebar.js')
+    script(src='static/js/slick.min.js')
+
 block content
     .breadcrumbs
         .container.container_small
@@ -15,8 +19,8 @@ block content
                     span Истории в картинках
     .container.container_small
         h1.like-h1 Истории в картинках
-    .stories-page__main.container.container_small.main
-        .main__wrap
+    .stories-page__main.container.container_small.main(data-num='0')
+        .main__wrap.js-open-story
             .main__image
                 img(src='static/img/content/stories-main.jpg' alt='Природно-культурное наследие Архангельской области')
             .main__info
@@ -31,3 +35,414 @@ block content
                 .main__right
                     .main__descr
                         span Архангельская область поистине уникальна - она одна из чрезвычайно насыщенных памятниками истории, архитектуры и градостроительства, мемориального искусства.
+    .stories-page__list.container.container_small
+        .stories-page__item.story(data-num='1')
+            .story__image
+                img(src='static/img/content/story-1.jpg' alt='Путешествие на Русский Север')
+            .story__text
+                .story__title.js-open-story
+                    a(href='#') Путешествие на Русский Север
+                .story__date
+                    span 13 сент 2017
+                .story__descr
+                    span Nunc elementum diam nec faucibus tincidunt. Duis quis mattis mauris. Integer vitae lacus sed augue convallis luctus.
+        .stories-page__item.story(data-num='2')
+            .story__image
+                img(src='static/img/content/story-2.jpg' alt='Памятники древнерусской живописи')
+            .story__text
+                .story__title.js-open-story
+                    a(href='#') Памятники древнерусской живописи
+                .story__date
+                    span 21 авг
+                .story__descr
+                    span Nunc elementum diam nec faucibus tincidunt. Duis quis mattis mauris. Integer vitae lacus sed augue convallis luctus.
+        .stories-page__item.story(data-num='3')
+            .story__image
+                img(src='static/img/content/story-3.jpg' alt='Декоративно-прикладное искусство')
+            .story__text
+                .story__title.js-open-story
+                    a(href='#') Декоративно-прикладное искусство
+                .story__date
+                    span 11 май 2017
+                .story__descr
+                    span Nunc elementum diam nec faucibus tincidunt. Duis quis mattis mauris. Integer vitae lacus sed augue convallis luctus.
+        .stories-page__item.story(data-num='4')
+            .story__image
+                img(src='static/img/content/story-4.jpg' alt='Отчеты фольклорных экспедиций')
+            .story__text
+                .story__title.js-open-story
+                    a(href='#') Отчеты фольклорных экспедиций
+                .story__date
+                    span 8 апр 2017
+                .story__descr
+                    span Nunc elementum diam nec faucibus tincidunt. Duis quis mattis mauris. Integer vitae lacus sed augue convallis luctus.
+    .stories-page__btn.container.container_small
+        a(href='#').button.button_icon.button_serif Перейти в архив историй #[i.next-bold]
+
+
+block popup
+    .popup-story
+        .popup-story__overlay
+            .popup-story__container
+                .popup-story__top
+                    .popup-story__title
+                        span «Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова
+                    .popup-story__close
+                .popup-story__slider-wrap
+                    .popup-story__slider-prev.js-popup-story-slider-big-prev
+                    .popup-story__slider-next.js-popup-story-slider-big-next
+                    .popup-story__slider.js-popup-story-slider-big
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                .popup-story__legend
+                    .popup-story__legend-slider.js-popup-story-legend
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                .popup-story__share.share
+                    .share__text
+                        span Поделиться в соцсетях
+                    .share__list
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-fb.png' alt='Facebook')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-vk.png' alt='VK')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-twitter.png' alt='Twitter')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-pinterest.png' alt='Pinterest')
+    .popup-story
+        .popup-story__overlay
+            .popup-story__container
+                .popup-story__top
+                    .popup-story__title
+                        span 2 «Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова
+                    .popup-story__close
+                .popup-story__slider-wrap
+                    .popup-story__slider-prev.js-popup-story-slider-big-prev
+                    .popup-story__slider-next.js-popup-story-slider-big-next
+                    .popup-story__slider.js-popup-story-slider-big
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                .popup-story__legend
+                    .popup-story__legend-slider.js-popup-story-legend
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                .popup-story__share.share
+                    .share__text
+                        span Поделиться в соцсетях
+                    .share__list
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-fb.png' alt='Facebook')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-vk.png' alt='VK')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-twitter.png' alt='Twitter')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-pinterest.png' alt='Pinterest')
+    .popup-story
+        .popup-story__overlay
+            .popup-story__container
+                .popup-story__top
+                    .popup-story__title
+                        span 3 «Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова
+                    .popup-story__close
+                .popup-story__slider-wrap
+                    .popup-story__slider-prev.js-popup-story-slider-big-prev
+                    .popup-story__slider-next.js-popup-story-slider-big-next
+                    .popup-story__slider.js-popup-story-slider-big
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                .popup-story__legend
+                    .popup-story__legend-slider.js-popup-story-legend
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                .popup-story__share.share
+                    .share__text
+                        span Поделиться в соцсетях
+                    .share__list
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-fb.png' alt='Facebook')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-vk.png' alt='VK')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-twitter.png' alt='Twitter')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-pinterest.png' alt='Pinterest')
+    .popup-story
+        .popup-story__overlay
+            .popup-story__container
+                .popup-story__top
+                    .popup-story__title
+                        span 4 «Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова
+                    .popup-story__close
+                .popup-story__slider-wrap
+                    .popup-story__slider-prev.js-popup-story-slider-big-prev
+                    .popup-story__slider-next.js-popup-story-slider-big-next
+                    .popup-story__slider.js-popup-story-slider-big
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                .popup-story__legend
+                    .popup-story__legend-slider.js-popup-story-legend
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                .popup-story__share.share
+                    .share__text
+                        span Поделиться в соцсетях
+                    .share__list
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-fb.png' alt='Facebook')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-vk.png' alt='VK')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-twitter.png' alt='Twitter')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-pinterest.png' alt='Pinterest')
+    .popup-story
+        .popup-story__overlay
+            .popup-story__container
+                .popup-story__top
+                    .popup-story__title
+                        span 5 «Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова
+                    .popup-story__close
+                .popup-story__slider-wrap
+                    .popup-story__slider-prev.js-popup-story-slider-big-prev
+                    .popup-story__slider-next.js-popup-story-slider-big-next
+                    .popup-story__slider.js-popup-story-slider-big
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                        .popup-story__item
+                            .popup-story__image
+                                img(src='static/img/content/story-slider-1.jpg' alt='«Мороз, Красный нос»: иллюстрированные издания поэмы Н. А. Некрасова')
+                            .popup-story__descr
+                                span #[span.bold Н. А. Некрасов и его поэма «Мороз, Красный нос»] #[br] #[br] 10 декабря исполняется 195 лет со дня рождения Николая Алексеевича Некрасова (1821-1878). Его поэма «Мороз, Красный нос» входит в тройку наиболее популярных и детально изученных. Тем не менее, не так много исследований, посвященных оформлению некрасовских произведений, несмотря на то, что творческое наследие писателя в разное время иллюстрировали известные художники. В XIX-XX вв. к произведениям Некрасова обращались художники разного плана, находя в его поэзии много увлекательного для себя: А. И. Лебедев, Е. М. Бём, А. Ф. Пахомов, А. А. Пластов, К. и Ф. Мельниковы, В. М. Бескаравайный, Ф. В. Лемкуль и др. Поэма «Мороз, Красный нос» привлекает художников-иллюстраторов яркостью, точностью и колоритностью образов, особой живописностью литературного языка.
+                .popup-story__legend
+                    .popup-story__legend-slider.js-popup-story-legend
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-1.jpg' alt='Название фото')
+                        .popup-story__legend-item
+                            img(src='static/img/content/story-legend-2.jpg' alt='Название фото')
+                .popup-story__share.share
+                    .share__text
+                        span Поделиться в соцсетях
+                    .share__list
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-fb.png' alt='Facebook')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-vk.png' alt='VK')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-twitter.png' alt='Twitter')
+                        .share__item
+                            a(href='#')
+                                img(src='static/img/general/story-pinterest.png' alt='Pinterest')

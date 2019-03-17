@@ -382,3 +382,96 @@
 
         @media $phone
           margin-right: 0
+
+.stories-archive-page
+
+  &__heading
+    position: relative
+    margin-bottom: 103px
+
+    @media $tablet_small
+      margin-bottom: 40px
+
+  &__top-btn
+    position: absolute
+    top: -8px
+    right: 16px
+
+    @media $tablet_small
+      position: static
+      text-align: center
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 50px
+
+    @media $tablet_small
+      margin-bottom: 20px
+
+  &__item
+    width: calc((100% - 10px) / 3)
+
+    @media $tablet_small
+      width: calc((100% - 10px) / 2)
+
+    @media $phone
+      width: 100%
+
+
+  .archive
+    display: flex
+    text-decoration: none
+    margin-right: 5px
+    margin-bottom: 70px
+
+    @media $phone
+      margin-right: 0
+      margin-bottom: 40px
+
+    &:nth-child(3n)
+      margin-right: 0
+
+      @media $tablet_small
+        margin-right: 5px
+
+        @media $phone
+          margin-right: 0
+
+    &:nth-child(even)
+      margin-right: 0
+
+    &__photo
+      width: 80px
+      height: 80px
+      margin-right: 12px
+      border-radius: 50%
+      flex-shrink: 0
+
+    &__text
+      max-width: 150px
+
+      @media $phone
+        max-width: none
+
+    &__name
+      margin-bottom: -3px
+
+      font-family: 'Playfair'
+      font-size: 16px
+      line-height: 18px
+      letter-spacing: 0
+      color: $brown
+      font-weight: bold
+
+    &__date
+      text-transform: uppercase
+      font-size: 12px
+      line-height: 36px
+      color: $gray
+
+  .pagination
+    margin-bottom: 120px
+
+    @media $tablet_small
+      margin-bottom: 40px

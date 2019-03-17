@@ -31,7 +31,7 @@ block content
                             option(value='Тема статьи') Тема статьи
                             option(value='История') История
             .articles-page__add
-                a(href='#').button.button_color Добавить статью
+                a(href='#').button.button_color.js-popup-add-article-open Добавить статью
     .articles-page__list.container
         .articles-page__item.article
             .article__title
@@ -106,4 +106,50 @@ block content
             .article__preview
                 span В итоге в национально-географическое, а затем и политическое понятие «Русь» начинает входить неотъемлемой частью понятие «Русский Север». В процессе освоения обширных регионов Севера пришлым русским...
 
-
+block popup
+    .popup-add-article
+        .popup-add-article__overlay
+            .popup-add-article__container
+                .popup-add-article__close.js-popup-add-article-close
+                .popup-add-article__heading.like-h1
+                    span Добавить статью
+                .popup-add-article__hint
+                    span Мы всегда рады сотрудничеству и предлагаем всем желающим разместить на портале статьи и публикации о культурном наследии нашего края.
+                .popup-add-article__form.form
+                    form
+                        .form__list
+                            .form__item
+                                .form__hint
+                                    span Имя автора
+                                .form__input
+                                    input(type='text')
+                            .form__item
+                                .form__hint
+                                    span E-mail #[span.form__small-text (не публикуется)]
+                                .form__input
+                                    input(type='text')
+                            .form__item
+                                .form__hint
+                                    span Название статьи
+                                .form__input
+                                    input(type='text')
+                            .form__item
+                                .form__hint
+                                    span Тема статьи
+                                .form__input
+                                    select.select
+                                        option(value='Выберите тему') Выберите тему
+                                        option(value='История') История
+                            .form__item.form__item_file
+                                .form__hint
+                                    span Прикрепите файл статьи
+                                .form__small-text
+                                    span поддерживается загрузка файлов формата doc, docx, pdf, zip
+                                .form__input
+                                    input(type='file')
+                        .form__bottom
+                            .form__personal
+                                input(type='checkbox' id='ch-personal').checkbox
+                                label(for='ch-personal') даю согласие на обработку персональных данных
+                            .form__add
+                                button.button.button_color Добавить статью

@@ -260,6 +260,7 @@ u
   border: 1px solid $brown_light
   padding: 14px 38px 11px
   background-color: $white
+  cursor: pointer
 
   color: $brown_light2
   font-size: 14px
@@ -544,3 +545,39 @@ u
 
 .select2-container .select2-selection--single .select2-selection__rendered
   padding-right: 40px
+
+.checkbox
+  display: none
+
+  & + label
+    position: relative
+    max-width: 205px
+    padding-left: 32px
+    display: inline-block
+
+    color: $brown_light2
+    font-size: 14px
+    line-height: 15px
+    letter-spacing: 0
+
+    &::before
+      content: ''
+      position: absolute
+      top: 2px
+      left: 0
+      display: block
+      width: 13px
+      height: 13px
+      border: 1px solid $brown_light
+
+  &:checked
+
+    & + label
+
+      &::after
+        content: '\002714'
+        position: absolute
+        top: 1px
+        left: 1px
+
+
